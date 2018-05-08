@@ -1,0 +1,18 @@
+								##############################
+								#######	 Landing Page	######
+								##############################
+REQUISITOS
+	4 Sections
+		1 Section
+			-> contator regressivo para uma semana
+			-> video apresentando o calçado
+			-> botão para se cadastrar (gravar o nome e e-mail em um banco)
+		2 Section
+			-> benefícios de uso, por exemplo corrida, tênis, salto, academia e outros beneficios q o calçado proporciona
+		3 Section
+			-> optin reforçando a emoção para que haja o cadastro
+		4 Section
+			-> footer
+			-> perguntas e respostas
+
+	
