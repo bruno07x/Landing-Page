@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,66 +8,25 @@
     <link rel="stylesheet" href="CSS/style.css">
     <title>Nike HyperAdapt</title>
 </head>
+
 <body>
-    <section>
-        <!-- <video class="vd" autoplay loop src="https://nikevideo.nike.com/72451143001/201604/2446/72451143001_4827356642001_4827250614001.mp4">
-        </video> -->
-        <img src="img/nike_icon.png">
-        <h3 class="frase">
-            Esqueça o que você conhece sobre tênis... 
-            Eis aqui uma nova concepção!
-        </h3>
-        <p>Faça parte desta revoluçao...</p>
-        <a href="">Reserve</a>
-        <div id="count"></div>
-        <SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript">
-
-dateFuture = new Date(2018,4,15,6,44,50);
-
-function GetCount(){
-
-        dateNow = new Date();                                                                        //grab current date
-        amount = dateFuture.getTime() - dateNow.getTime();                //calc milliseconds between dates
-        delete dateNow;
-
-        // time is already past
-        if(amount < 0){
-                document.getElementById('countbox').innerHTML="Now!";
-        }
-        // date is still good
-        else{
-                days=0;hours=0;mins=0;secs=0;out="";
-
-                amount = Math.floor(amount/1000);//kill the "milliseconds" so just secs
-
-                days=Math.floor(amount/86400);//days
-                amount=amount%86400;
-
-                hours=Math.floor(amount/3600);//hours
-                amount=amount%3600;
-
-                mins=Math.floor(amount/60);//minutes
-                amount=amount%60;
-
-                secs=Math.floor(amount);//seconds
-
-                if(days != 0){out += days +" day"+((days!=1)?"s":"")+", ";}
-                if(days != 0 || hours != 0){out += hours +" hour"+((hours!=1)?"s":"")+", ";}
-                if(days != 0 || hours != 0 || mins != 0){out += mins +" minute"+((mins!=1)?"s":"")+", ";}
-                out += secs +" seconds";
-                document.getElementById('countbox').innerHTML=out;
-
-                setTimeout("GetCount()", 1000);
-        }
-}
-
-window.onload=function(){GetCount();}
-
-</script>
-<div id="countbox"></div>
+    <section>    
+        <!-- <video class="movie" autoplay loop src="https://nikevideo.nike.com/72451143001/201604/2446/72451143001_4827356642001_4827250614001.mp4"></video> -->
+        <div class="grid secao1">
+            <img class="logo" src="img/nike_icon.png">
+            <h3 class="frase">
+                Esqueça o que você conhece sobre tênis... Eis aqui uma nova concepção!
+            </h3>
+            <div class="btn-area">
+                <p>Faça parte desta revoluçao...</p>
+                <a href="#" class="btn">Reserve</a>
+            </div>
+            <div id="countbox" class="contagem"></div>
+        </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="JS/countdown.js"></script>
     <script type="text/javascript" src="JS/js.js"></script>
 </body>
+
 </html>
