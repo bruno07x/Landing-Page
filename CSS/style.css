@@ -1,4 +1,14 @@
 /* ############################################
+   ################### FONTE ##################
+   ############################################ */
+   /* 
+   font-family: 'Alice', serif;
+   font-family: 'Roboto Condensed', sans-serif; */
+   /* Fibonacci: 1,1,2,3,5,8,13,21,34,55 */
+   @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Alice');
+
+/* ############################################
    ################### RESET ##################
    ############################################ */
 html, body, div, span, applet, object, iframe,
@@ -44,6 +54,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a{
+	text-decoration: none;
+}
 
 /* ############################################
    ################### STYLE ##################
@@ -61,16 +74,16 @@ body{
 
 .grid{
 	display: grid;
-	max-width: 80%;
+	max-width: 90%;
 	margin: 0 auto;
 }
 .secao1{
-	grid-template-columns: 70% 30%;
-	grid-template-rows: 150px 281px 90px; /* 460.683 */ 
+	grid-template-columns: 80% 20%;
+	grid-template-rows: 200px 260px 140px 45px;
 	grid-template-areas: "logo logo"
-						 "frase btn-area"
+						 "frase ."
+						 "btn-area btn-area"
 						 ". contagem";
-	
 }
 .logo{
 	grid-area: logo;
@@ -78,13 +91,57 @@ body{
 }
 .btn-area{
 	grid-area: btn-area;
+	margin: 0 auto;
+}
+.btn{
+	background: #d7844c;
+	padding: 10px 50px;
 }
 .contagem{
 	grid-area: contagem;
+	background: #f1ece9;
+	padding: 5px 10px;
+	max-width: 300px;
+	left: 2000px;
+}
+.byline{
+	font-size: 1em;
+	font-family: 'Alice', serif;
+	padding: 0px 5px;
+}
+.bhead{
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 2em;
+}
+.display{
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 3em;
+	line-height: 1.5em;
 }
 .frase{
 	grid-area: frase;
 }
-.btn{
-
+.white{
+	color: #f1ece9;
+}
+.laranja{
+	color: #d7844c;
+}
+.azul2{
+	color: #76bddf;
+}
+.azul1{
+	color: #4c9fd7;
+}
+.cinza{
+	color: #485058;
+}
+.m-y-1{
+	margin: 1em 0;
+}
+.text-center{
+	text-align: center;
+}
+.text-right{
+	text-align: right;
 }

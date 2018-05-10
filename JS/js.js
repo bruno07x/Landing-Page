@@ -1,4 +1,4 @@
-        dateFuture = new Date(2018, 4, 15, 6, 44, 50);
+        dateFuture = new Date(2018, 4, 15);
 
         function GetCount() {
 
