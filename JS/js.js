@@ -1,3 +1,12 @@
+        // ÁREA DE TESTE
+        // $(window).scroll(function () {
+        //     if ($(this).scrollTop() > 480) {
+        //         $(".movie").addClass("non-fixo");
+        //     }else{
+        //         $(".movie").removeClass("non-fixo");
+        //     }
+        //   });
+        // CONTADOR
         dateFuture = new Date(2018, 4, 15);
 
         function GetCount() {
