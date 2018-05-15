@@ -12,19 +12,18 @@
 
 <body>
     <section class="">
-        <div class="grid secao1 tester">
-
+        <div class="grid secao1">
             <img class="logo" src="img/nike_icon.png">
-            <h1 class="frase display">
+            <h1 class="frase display text-center">
                 Esqueça o que você conhece sobre tênis...
                 <br> Eis aqui uma nova concepção!
             </h1>
             <!-- MODAL -->
             <div id="ex1" class="modal modal-style">
                 <div class="area">
-                    <h3>Esqueça o que você conhece sobre tênis...
+                    <h3 class="display azul2">Esqueça o que você conhece sobre tênis...
                         <br> Eis aqui uma nova concepção!</h3>
-                    <form action="post">
+                    <form action="post" class="grid form-modal">
                         <div class="">
                             <input type="text" class="area-input" placeholder="Primeiro nome">
                         </div>
@@ -38,11 +37,10 @@
                 </div>
             </div>
             <!-- FIM MODAL -->
-            <div class="area_btn">
-                <a style="display: block;" href="#ex1" rel="modal:open" class="btn bhead">Reserve</a>
-                <div id="countbox" class="contagem bhead text-center"></div>
+            <div class="area-btn">
+                <a style="display: block;" href="#ex1" rel="modal:open" class="btn bhead m-y-2">Reserve</a>
             </div>
-            
+            <div id="countbox" class="contagem bhead"></div>
         </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
