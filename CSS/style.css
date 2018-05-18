@@ -9,7 +9,7 @@
 /* Fibonacci: 1,1,2,3,5,8,13,21,34,55 */
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
-@import url('https://fonts.googleapis.com/css?family=Alice');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,400,900');
 /* ############################################
    ################### RESET ##################
    ############################################ */
@@ -161,8 +161,7 @@ body {
 
 .grid {
 	display: grid;
-	margin: 0 auto;
-	box-sizing: border-box;
+
 }
 .teste{
 	align-items: center;
@@ -172,6 +171,8 @@ body {
    ############################################ */
 
 .secao1 {
+	margin: 0 auto;
+	box-sizing: border-box;
 	background-image: url(../IMG/tes3.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -206,14 +207,13 @@ body {
 	box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
 	text-align: center;
 	max-width: 300px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.5em;
+	font-weight: 900;
 }
 
 .frase {
 	grid-area: frase;
-	color: rgba(255, 255, 255, 0.9);
-	text-shadow: 3px 3px #333;
-	transition: all 0.2s;
-	display: inline-block;
 }
 
 /* ############################################
@@ -359,17 +359,19 @@ body {
 	font-size: 2em;
 	line-height: 1.5em;
 	text-transform: uppercase;
+	/* text-shadow: 3px 3px #333; */
 }
 
 .byline {
-	font-size: 1em;
+	font-size: 0.9em;
 	font-family: 'Alice', serif;
 	padding: 0px 5px;
 }
 
 .bhead {
-	font-family: 'Roboto Condensed', sans-serif;
-	font-size: 1.5em;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.25em;
+	font-weight: 200;
 }
 
 .text-center {
@@ -416,4 +418,47 @@ body {
 	background-color: #d7844c;
 	box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
 	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.5em;
+	font-weight: 900;
 }
+
+
+/* ############################################
+   ###################  SECAO 2 ################
+   ############################################ */
+ .secao2{
+	 width: 100%;
+	 grid-template-columns: 60% 40%;
+	 grid-template-rows: auto auto auto;
+	 grid-template-areas: "movie frase2" "benefics img" "frase3 frase3";
+	 width: 100%;
+	 height: 100%;
+	 padding: 40px;
+	 margin: 0 auto;
+	 box-sizing: border-box;
+	 background: rgba(250, 250, 250, 0.3);
+ }  
+ .movie{
+	grid-area: movie;
+	width: 100%;
+	height: auto;
+	display: block;
+	box-shadow: -5px 10px 2px #24323d;
+ }
+ .frase2{
+	 grid-area: frase2;
+	 align-content: center;
+	 padding: 10px;
+ }
+ .frase3{
+	 grid-area: frase3;
+	 align-content: center;
+ }
+ .benefics{
+	 grid-area: benefics;
+	 align-content: center;
+ }
+ .img-tenis{
+	 grid-area: img; 
+ }
