@@ -6,8 +6,8 @@
         //         $(".movie").removeClass("non-fixo");
         //     }
         //   });
-        // CONTADOR
-        dateFuture = new Date(2018, 4, 15);
+        // CONTADOR FORMAT AAAA/MM/DIA
+        dateFuture = new Date(2018, 4, 21);
 
         function GetCount() {
 

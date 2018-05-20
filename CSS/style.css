@@ -156,16 +156,16 @@ a {
 
 body {
 	background: #4c9fd7;
-	height: 10000px;
 }
 
 .grid {
 	display: grid;
-
 }
-.teste{
+
+.teste {
 	align-items: center;
 }
+
 /* ############################################
    ###############  SECTION 1 #################
    ############################################ */
@@ -221,7 +221,7 @@ body {
    ############################################ */
 
 .white {
-	color: #f1ece9;
+	color: #f3f3f5;
 }
 
 .laranja {
@@ -243,6 +243,7 @@ body {
 /* ############################################
    ############## MARGIN & PADDING ############
    ############################################ */
+
 /* MARGIN RIGHT E LEFT */
 
 .m-x-1 {
@@ -350,6 +351,7 @@ body {
 .m-l-4 {
 	margin-left: 4em;
 }
+
 /* ############################################
    ################  TEXT #####################
    ############################################ */
@@ -400,7 +402,7 @@ body {
 	border: none;
 	font-size: 1em;
 	border-bottom: groove 3px #4c9fd7;
-	color: #FFFFFF;
+	color: #f3f3f5;
 }
 
 /* ############################################
@@ -423,42 +425,106 @@ body {
 	font-weight: 900;
 }
 
-
 /* ############################################
    ###################  SECAO 2 ################
    ############################################ */
- .secao2{
-	 width: 100%;
-	 grid-template-columns: 60% 40%;
-	 grid-template-rows: auto auto auto;
-	 grid-template-areas: "movie frase2" "benefics img" "frase3 frase3";
-	 width: 100%;
-	 height: 100%;
-	 padding: 40px;
-	 margin: 0 auto;
-	 box-sizing: border-box;
-	 background: rgba(250, 250, 250, 0.3);
- }  
- .movie{
+
+.secao2 {
+	width: 100%;
+	grid-template-columns: 60% 40%;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: "movie frase2" "benefics img" "frase3 frase3";
+	width: 100%;
+	height: 100%;
+	padding: 40px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	background: rgba(250, 250, 250, 0.3);
+}
+
+.movie {
 	grid-area: movie;
 	width: 100%;
 	height: auto;
 	display: block;
 	box-shadow: -5px 10px 2px #24323d;
- }
- .frase2{
-	 grid-area: frase2;
-	 align-content: center;
-	 padding: 10px;
- }
- .frase3{
-	 grid-area: frase3;
-	 align-content: center;
- }
- .benefics{
-	 grid-area: benefics;
-	 align-content: center;
- }
- .img-tenis{
-	 grid-area: img; 
- }
+}
+
+.frase2 {
+	grid-area: frase2;
+	align-content: center;
+	padding: 10px;
+}
+
+.frase3 {
+	grid-area: frase3;
+	align-content: center;
+}
+
+.benefics {
+	grid-area: benefics;
+	align-content: center;
+}
+
+.img-tenis {
+	grid-area: img;
+}
+
+/* ############################################
+   ###################  SECAO 3 ################
+   ############################################ */
+
+.secao3 {
+	background-color: rgba(250, 250, 250, 0.8);
+	grid-template-columns: auto 50%;
+	grid-template-rows: auto auto;
+	grid-template-areas: "img-bg-min frase4" "img-bg-min btn-secao3";
+}
+
+.img-bg-min {
+	grid-area: img-bg-min;
+}
+
+.frase4 {
+	grid-area: frase4;
+}
+
+.btn-secao3 {
+	grid-area: btn-secao3;
+}
+
+/* ############################################
+   ###################  SECAO 4 ################
+   ############################################ */
+
+.secao4-perguntas {
+	background-color: rgba(250, 250, 250, 0.3);
+	padding: 40px;
+}
+
+.conteudo-perguntas {
+	border: solid 2px black;
+	padding: 20px;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.secao4-footer {
+	
+	background-color: rgba(250, 250, 250, 0.8);
+	grid-template-columns: 100%;
+	grid-template-rows: auto auto;
+	grid-template-areas: "icone-nike-footer" "redes-sociais";
+	padding: 40px;
+}
+.icone-nike-footer{
+	grid-area: icone-nike-footer;
+	margin: 0 auto 5em auto;
+}
+.redes-sociais {
+	grid-area: redes-sociais;
+	margin: 0 auto;
+}
+.redes-sociais li {
+	display: inline;
+}
