@@ -1,0 +1,36 @@
+/* Estilos dos erros padrão */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.boxErro
+{
+	position: relative;
+	padding: 10px;
+	border-radius: 5px;
+	color: #333;
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.90em;
+	margin: 1% 0;
+}
+
+/* Classe usada para apresentar uma mensagem de erro no sistema */
+.erro
+{
+	background-color: #ff919a    ;
+}
+
+/* Classe usada para apresentar uma mensagem de alerta no sistema */
+.alerta
+{
+	background-color: #fff090 ;
+}
+
+/* Classe usada para apresentar uma mensagem de sucesso no sistema */
+.sucesso
+{
+	background-color: #b7d3a8 ;
+}
+
+/* Classe usada para apresentar uma mensagem de noticia no sistema */
+.noticia
+{
+	background-color:  #85d3f9   ;
+}
