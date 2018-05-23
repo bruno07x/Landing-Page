@@ -162,8 +162,46 @@ body {
 	display: grid;
 }
 
-.teste {
-	align-items: center;
+
+/* ############################################
+   ###############  ERROS #################
+   ############################################ */
+/* Estilos dos erros padrão */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.boxErro
+{
+	position: relative;
+	padding: 10px;
+	border-radius: 5px;
+	color: #333;
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.90em;
+	margin: 3% 0;
+	max-width: 100%;
+}
+
+/* Classe usada para apresentar uma mensagem de erro no sistema */
+.erro
+{
+	background-color: #ff919a    ;
+}
+
+/* Classe usada para apresentar uma mensagem de alerta no sistema */
+.alerta
+{
+	background-color: #fff090 ;
+}
+
+/* Classe usada para apresentar uma mensagem de sucesso no sistema */
+.sucesso
+{
+	background-color: #b7d3a8 ;
+}
+
+/* Classe usada para apresentar uma mensagem de noticia no sistema */
+.noticia
+{
+	background-color:  #85d3f9   ;
 }
 
 /* ############################################
@@ -206,7 +244,7 @@ body {
 	background-color: #fff;
 	box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
 	text-align: center;
-	max-width: 300px;
+	max-width: 400px;
 	font-family: 'Raleway', sans-serif;
 	font-size: 1.5em;
 	font-weight: 900;
@@ -365,10 +403,8 @@ body {
 .secao2 {
 	width: 100%;
 	grid-template-columns: 60% 40%;
-	grid-template-rows: auto auto auto;
-	grid-template-areas: "movie frase2" "img benefics" "frase3 frase3";
-	width: 100%;
-	height: 100%;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas: "movie movie" "frase2 frase2" "img benefics" "frase3 frase3";
 	padding: 40px;
 	margin: 0 auto;
 	box-sizing: border-box;
@@ -387,6 +423,10 @@ body {
 	grid-area: frase2;
 	align-content: center;
 	padding: 10px;
+}
+
+.frase2::after{
+	border: solid 2px #d7844c;
 }
 
 .frase3 {
@@ -433,6 +473,7 @@ body {
 .secao4-perguntas {
 	background-color: rgba(250, 250, 250, 0.3);
 	padding: 40px;
+	box-sizing: border-box;
 }
 
 .conteudo-perguntas {
@@ -443,12 +484,13 @@ body {
 }
 
 .secao4-footer {
-	
+	box-sizing: border-box;
 	background-color: rgba(250, 250, 250, 0.8);
 	grid-template-columns: 100%;
 	grid-template-rows: auto auto;
 	grid-template-areas: "icone-nike-footer" "redes-sociais";
 	padding: 40px;
+	justify-content: space-between;
 }
 .icone-nike-footer{
 	grid-area: icone-nike-footer;
@@ -456,8 +498,7 @@ body {
 }
 .redes-sociais {
 	grid-area: redes-sociais;
-	margin: 0 auto;
 }
 .redes-sociais li {
-	display: inline;
+	display: inline-block;
 }
