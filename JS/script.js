@@ -67,5 +67,39 @@ $(function () {
         esse = $(this);
         esse.parent().find('.sanfona').slideToggle("slow");
     });    
+});
+
+$(function(){
+    $('.form-jquery').submit(function(){
+        var dados = $(this).serialize();
+         
+        $.ajax({
+            url: 'validacao.php',
+            data: dados,
+            type: 'POST',
+            dataType: 'json',
+            beforeSend: function () {  
+                $('.load').fadeIn();
+            },
+            success: function (response) {
+                $('.load').fadeOut(500);
+                console.log(response.Alerta);
+                
+
+                if (response.Alerta) {
+                    $('.box').html('<p class="boxErro alerta text-center">'+ response.Alerta +'</p>');              
+                }
+                else if (response.Erro) {
+                    $('.box').html('<p class="boxErro erro text-center">'+ response.Erro +'</p>');
+                } 
+                else {
+                    $('.box').html('<p class="boxErro sucesso text-center">'+ response.Sucesso +'</p>');
+                }
+            }
+        });
+
+        return false;  
+    });
+
 
 });

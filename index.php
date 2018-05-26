@@ -25,15 +25,18 @@
             <div id="ex1" class="modal modal-style">
                 <p class="text-center white bhead">Não perca tempo!
                     <br> Faça parte desta evolução.</p>
-                <form method="post" class="form-modal">
+                <form method="post" class="form-modal form-jquery">
                     <span class="white byline">Nome:</span>
                     <input type="text" name="nome" required="" class="area-input">
                     <span class="white byline">Email:</span>
                     <input type="email" name="email" class="area-input">
                     <div class="text-center m-t-1">
-                        <a href="#" class="btn">Reserve!</a>
+                        <button class="btn" type="submit">Reserve</button>
+                        <!-- <a href="#" class="btn">Reserve!</a> -->
                     </div>
+                    <img src="IMg/load.gif" class="load" alt="Carregando...">
                 </form>
+            <div class="box"></div>
             </div>
             <!-- FIM MODAL -->
             <div class="A-btn-secao1">

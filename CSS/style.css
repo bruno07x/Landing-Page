@@ -393,7 +393,8 @@ body {
 	color: #333;
 	font-size: 0.90em;
 	margin: 3% 0;
-	max-width: 100%;
+  width: 90%;
+  display: inline-block;
 }
 
 /* Classe usada para apresentar uma mensagem de erro no sistema */
@@ -658,11 +659,15 @@ body {
    ###################  MODAL #################
    ############################################ */
 
-   .modal-style {
+.modal-style {
   /* background: rgba(127, 143, 166, 0.9); */
   background: rgba( 39, 120, 175, 0.8);
+  padding: 30px;
 }
-
+.modal-style button{
+  float: right;
+  margin-right: 30px;
+}
 .area-input {
 	width: 90%;
 	margin: 1em auto;
@@ -670,6 +675,15 @@ body {
 	border: none;
 	border-bottom: groove 2px #d7844c;
 	color: #f3f3f5;
+}
+.load{
+  height: 50px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding-left: 5%;
+  display: none;
+  float: left;
+  margin-left: 30px;
 }
 
 /* ############################################
@@ -764,7 +778,6 @@ body {
 .btn {
 	display: inline-block;
 	padding: 0.7em 1.4em;
-	border-radius: 0.15em;
 	box-sizing: border-box;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -774,10 +787,11 @@ body {
 	text-align: center;
 	font-family: font-header;
 	font-size: 1.3em;
-	font-weight: 900;
+  font-weight: 900;
+  outline: 3px solid #d7844c;
+  border: 3px solid #fff;
+  cursor: pointer;
 }
-
-
 .secao4-footer {
 	box-sizing: border-box;
 	background-color: rgba(250, 250, 250, 0.8);
