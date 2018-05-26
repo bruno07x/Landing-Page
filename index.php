@@ -1,4 +1,4 @@
-<?php require "INC/config.inc.php"; ?>
+<?php require "_Mercurio/config.inc.php"; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,113 +12,115 @@
 </head>
 
 <body>
-
-    <section class="">
+    <h1 class="display-none">Nike HyperAdapt</h1>
+    <section class="bg-secao1">
         <div class="grid secao1">
-            <img class="logo" src="img/nike_icon.png">
-            <h1 class="frase display text-center white">
-                Just do it!
-            </h1>
+            <div class="A-logo m-t-1">
+                <img class="logo" src="img/nike_icon.png">
+            </div>
+            <div class="A-frase-secao1">
+                <h1 class="slogan text-center white">Just do it!</h1>
+            </div>
             <!-- MODAL -->
             <div id="ex1" class="modal modal-style">
-                <h3 class="bhead azul2 text-center m-b-2">Não perca tempo!
-                    <br> Faça parte desta evolução.</h3>
+                <p class="text-center white bhead">Não perca tempo!
+                    <br> Faça parte desta evolução.</p>
                 <form method="post" class="form-modal">
-                    <input type="text" name="nome" required="" class="area-input" placeholder="Primeiro nome">
-                    <input type="email" name="email" class="area-input" placeholder="E-mail">
-                    <div class="text-center">
-                        <button type="submit" name="enviar" required="" class="btn m-t-2">Reserve!</button>
-                        <!-- <a href="" class="btn m-t-2">Reserve!</a> -->
+                    <span class="white byline">Nome:</span>
+                    <input type="text" name="nome" required="" class="area-input">
+                    <span class="white byline">Email:</span>
+                    <input type="email" name="email" class="area-input">
+                    <div class="text-center m-t-1">
+                        <a href="#" class="btn">Reserve!</a>
                     </div>
-
                 </form>
             </div>
             <!-- FIM MODAL -->
-            <div class="area-btn">
-                <a style="display: block;" href="#ex1" rel="modal:open" class="btn">Reserve</a>
+            <div class="A-btn-secao1">
+                <a href="#ex1" rel="modal:open" class="btn">Reserve</a>
             </div>
-            <div id="countbox" class="contagem"></div>
-                                <!-- Teste para validação -->
-                                <div class="boxErro">
-                        <P>
-                            <?php
-                                $dados = [];
-                                $dados['nome'] = isset($_POST["nome"]) ? $dados['nome'] = $_POST["nome"] : $dados['nome'] = "";
-                                $dados['email'] = isset($_POST["email"]) ? $dados['email'] = $_POST["email"] : $email = "";
-                                // Verificação do email
-                                if (Check::Email($dados['email'])) {
-                                    // Email válido, inserção no BD
-                                    $Inserir = new Inserir();
-                                    $Inserir->InserirBD('reservaclientes', $dados);
-                                    echo "<div class=\"boxErro sucesso bhead\">";
-                                    echo "<p>";
-                                    echo "<b>Parabéns:</b> Você já está na lista de espera, recebera um e-mail assim que o produto estiver disponível para a compra";
-                                    echo "</p>";
-                                    echo "</div>";
-                                };
-                            ?>
-                        </P>
-                    </div>
+            <div id="countbox" class="A-cont m-t-0 text-center"></div>
         </div>
     </section>
-    <section>
+    <section class="bg-secao2">
         <div class="grid secao2">
-            <video autoplay loop muted class="movie">
-                <source src="IMG/nike_movie.mp4">
-            </video>
-            <h1 class="grid frase2 display white text-center m-y-0 cinza"> Esqueça tudo que você conhece sobre tênis... Eis aqui uma nova concepção!</h1>
-                <div class="grid benefics bhead m-t-0">
-                    <p class="display white">Beneficíos:</p>
-                    <ul>
-                        <li class="m-y-0">▶ Ajuste automatico aos pés</li>
-                        <li class="m-y-0">▶ Controle de iluminação RGB</li>
-                        <li class="m-y-0">▶ Contador de passos e calorias</li>
-                    </ul>
-                </div>
-                <img class="img-tenis grid m-t-1" src="IMG/tenis.png" alt="tênis nike">
-            <h3 class="grid frase3 display text-center cinza">Ideal para amantes de técnologias e atletas</h3>
+            <div class="A-frase1-secao2 text-center">
+                <h1 class="slogan">Eis aqui uma nova concepção de calçado!</h1>
+            </div>
+            <div class="A-beneficios">
+                <p class="bhead text-center">Beneficíos:</p>
+                <ul class="list-beneficio">
+                    <li class="">Ajuste automatico aos pés</li>
+                    <li class="">Controle de iluminação RGB</li>
+                    <li class="">Contador de passos e calorias</li>
+                </ul>
+                <p class="m-t-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat imperdiet feugiat. Nunc mi nisl.Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat imperdiet feugiat. Nunc mi nisl.</p>
+            </div>
+            <div class="A-img-secao2">
+                <img class="img-secao2" src="IMG/tenis.png" alt="tênis nike">
+            </div>
+            <div class="A-frase2-secao2 text-center">
+                <h3 class="slogan">Técnologia e conforto na sola dos pés</h3>
+            </div>
         </div>
     </section>
     <section>
-        <div class="grid secao3">
-            <img class="img-bg-min" src="IMG/bg_min.png" alt="Calçado nike">
-            <h1 class="display azul1 grid text-center m-t-3">Faça parte desta evolução!</h1>
-            <div class="btn-secao3 text-center">
+        <div class="grid-full secao3">
+            <div class="A-img-secao3">
+                <img class="" src="IMG/bg2_min.png" alt="Calçado nike">
+            </div>
+            <div class="A-frase-secao3">
+                <h1 class="slogan white text-center">Faça parte desta evolução!</h1>
+            </div>
+            <div class="A-btn-secao3">
                 <a href="#ex1" rel="modal:open" class="btn">Reserve</a>
             </div>
         </div>
     </section>
-    <section>
-        <div class="grid secao4-perguntas">
-            <div class="conteudo-perguntas">
-                <h1 class="display white text-center">Perguntas frequentes:</h1>
-                <ul>
-                    <li>
-                        <h3 class="bhead">O que acompanha o produto?</h3>
-                        <p class="m-l-0 m-y-0">O produto vem acompanhado com 2 pares de carregadores com plug magnético, um manual de inicio rápido
-                            com QR code para baixar o app</p>
-                    </li>
-                    <li>
-                        <h3 class="bhead">Como controlo a iluminação do calçado?</h3>
-                        <p class="m-l-0 m-y-0">Através do app você consegue configurar a cor com o código hexadecimal ou simplesmente arrastando
-                            para o lado da cor favorita.</p>
-                    </li>
-                    <li>
-                        <h3 class="bhead">Por outro lado, a competitividade nas transações comerciais apresenta tendências no sentido?</h3>
-                        <p class="m-l-0 m-y-0">Gostaria de enfatizar que o consenso sobre a necessidade de qualificação agrega Gostaria de enfatizar
-                            que o consenso sobre a necessidade de qualificação agrega .</p>
-                    </li>
-                    <li>
-                        <h3 class="bhead">Valor ao estabelecimento dos métodos utilizados na avaliação?</h3>
-                        <p class="m-l-0 m-y-0">Gostaria de enfatizar que o consenso sobre a necessidade de qualificação agrega Gostaria de enfatizar
-                            que o consenso sobre a necessidade de qualificação agrega .</p>
-                    </li>
-                </ul>
+    <section class="bg-secao4">
+        <div class="grid-full secao4">
+            <div class="A-frase-secao4">
+                <p class="slogan text-center">Perguntas frequentes:</p>
             </div>
+            <ul class="ul-secao4 m-b-1">
+                <li class="">
+                    <p class="h2-sanfona-secao4 bhead cinza">→ O que acompanha o produto?</p>
+                    <div class="sanfona">
+                        <p class="">O produto vem acompanhado com 2 pares de carregadores com plug magnético, um manual de inicio rápido
+                            com QR code para baixar o app</p>
+                    </div>
+                </li>
+                <li>
+                    <p class="h2-sanfona-secao4 bhead cinza">→ Como controlo a iluminação do calçado?</p>
+                    <div class="sanfona">
+                        <p class="">Através do app você consegue configurar a cor com o código hexadecimal ou simplesmente arrastando
+                            para o lado da cor favorita.</p>
+                    </div>
+                </li>
+                <li>
+                    <p class="h2-sanfona-secao4 bhead cinza">→ Por outro lado, a competitividade nas transações?</p>
+                    <div class="sanfona">
+                        <p class="">Gostaria de enfatizar que o consenso sobre a necessidade de qualificação agrega Gostaria de enfatizar
+                            que o consenso sobre a necessidade de qualificação agrega .</p>
+                    </div>
+                </li>
+                <li>
+                    <p class="h2-sanfona-secao4 bhead cinza">→ Valor ao estabelecimento dos métodos?</p>
+                    <div class="sanfona">
+                        <p class="">Gostaria de enfatizar que o consenso sobre a necessidade de qualificação agrega Gostaria de enfatizar
+                            que o consenso sobre a necessidade de qualificação agrega .</p>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <div class="grid secao4-footer">
-            <img class="icone-nike-footer" src="IMG/nike_icon2.png" alt="Icone Nike">
-            <ul class="redes-sociais text-center">
+    </section>
+    <section>
+        <div class="grid-full footer">
+            <div class="A-logo-secao5 m-y-0">
+                <img class="logo-footer" src="img/nike_icon.png">
+            </div>
+            <ul class="A-redes-sociais-footer text-center">
                 <li>
                     <a href="https://www.instagram.com/nike/?hl=pt-br">
                         <img src="IMG/insta.png" alt="Instagram Nike">
@@ -139,7 +141,7 @@
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    <script type="text/javascript" src="JS/js.js"></script>
+    <script type="text/javascript" src="JS/script.js"></script>
 </body>
 
 </html>

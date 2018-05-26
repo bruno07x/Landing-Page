@@ -59,3 +59,13 @@
         window.onload = function () {
             GetCount();
         }
+
+
+$(function () {
+    // Efeito sanfona na SECA0 4
+    $(".h2-sanfona-secao4").on("click", function(){
+        esse = $(this);
+        esse.parent().find('.sanfona').slideToggle("slow");
+    });    
+
+});
