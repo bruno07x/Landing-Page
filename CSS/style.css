@@ -549,7 +549,7 @@ body {
   grid-template-columns: 100%;
   grid-template-rows: repeat(3, auto);
   align-items: center;
-  background: #2778af;
+  background:linear-gradient(135deg, #5b247a 0%,#1bcedf 100%);
 }
 .A-img-secao3 img{
   width: 100%;
@@ -638,7 +638,8 @@ body {
   grid-template-columns: 100%;
   grid-template-rows: repeat(2, auto);
   justify-items: center;
-    background: #2778af;
+    /* background: #2778af; */
+    background:linear-gradient(135deg, #5b247a 0%,#1bcedf 100%);
 }
 .A-redes-sociais-footer{
   padding: 0;
