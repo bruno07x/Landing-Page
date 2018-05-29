@@ -51,20 +51,19 @@
                 <h1 class="slogan">Eis aqui uma nova concepção de calçado!</h1>
             </div>
             <div class="A-beneficios">
-                <p class="bhead text-center">Beneficíos:</p>
-                <ul class="list-beneficio">
-                    <li class="">Ajuste automatico aos pés</li>
-                    <li class="">Controle de iluminação RGB</li>
-                    <li class="">Contador de passos e calorias</li>
-                </ul>
-                <p class="m-t-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat imperdiet feugiat. Nunc mi nisl.Lorem
-                    ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat imperdiet feugiat. Nunc mi nisl.</p>
+                <p class="beneficio bhead azul-strong">
+                    Se ajusta automaticamente aos pés, com um controle de iluminação RGB e contador de passos e calorias. Tudo o que você precisa para ser uma pessoa de sucesso.
+                </p>
+                <p class="m-t-1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat imperdiet feugiat. Nunc mi nisl.Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat imperdiet feugiat. Nunc mi nisl.
+                </p>
             </div>
             <div class="A-img-secao2">
                 <img class="img-secao2" src="IMG/tenis.png" alt="tênis nike">
             </div>
             <div class="A-frase2-secao2 text-center">
-                <h3 class="slogan">Técnologia e conforto na sola dos pés</h3>
+                <h3 class="slogan">Tecnologia e conforto na sola dos pés</h3>
             </div>
         </div>
     </section>

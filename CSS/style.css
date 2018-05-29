@@ -347,8 +347,10 @@
    ############################################ */
 
 body {
-	background: #4c9fd7;
-	font-family: font-body;
+  /* background: #4c9fd7; */
+  background: #f3f3f5;
+  font-family: font-body;
+  color: #24323d;
 }
 
 .grid {
@@ -365,11 +367,6 @@ body {
 /* ############################################
    ###############  FONTES #################
    ############################################ */
-@font-face{
-	/* HEADER */
-	font-family: font-header;
-	src: url('../FONT/CantataOne-Regular.ttf');
-}
 @font-face{
 	/* BODY */
 	font-family: font-body;
@@ -422,7 +419,7 @@ body {
 }
 
 /* ############################################
-   ###############  SECTION 1 #################
+   ###############  SECAO 1 #################
    ############################################ */
 .secao1 {
 	grid-template-columns: 100%;
@@ -449,7 +446,7 @@ body {
 	box-sizing: border-box;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-family: font-header;
+	font-family: font-slogan;
 	font-weight: bold;
 	color: #d7844c;
 	background-color: #FFF;
@@ -486,7 +483,7 @@ body {
    ###################  SECAO 2 ################
    ############################################ */
 .bg-secao2{
-	background: rgba( 139, 193, 229, 0.8);
+  /* background: rgba( 139, 193, 229, 0.8); */
 }
 .secao2 {
 	grid-template-columns: 100%;
@@ -503,12 +500,13 @@ body {
 	height: 3px;
 	width: 200px;
 }
-.list-beneficio{
-	list-style-image: url(../IMG/arrow.svg);
-}
 .img-secao2{
 	width: 100%;
 	height: 100%;
+}
+.beneficio{
+  text-transform: uppercase;
+  line-height: 2em;
 }
 .A-frase2-secao2::before{
 	content: "";
@@ -551,6 +549,7 @@ body {
   grid-template-columns: 100%;
   grid-template-rows: repeat(3, auto);
   align-items: center;
+  background: #2778af;
 }
 .A-img-secao3 img{
   width: 100%;
@@ -559,6 +558,14 @@ body {
 .A-frase-secao3 {
   position: absolute;
   left: 5%;
+}
+.A-frase-secao3::after{
+	content: "";
+	background: #d7844c;
+	display: block;
+	margin: 0 auto;
+	height: 3px;
+	width: 200px;
 }
 .A-btn-secao3 {
   margin: 0 auto;
@@ -593,7 +600,7 @@ body {
    ###################  SECAO 4 ################
    ############################################ */
 .bg-secao4{
-  background: rgba( 139, 193, 229, 0.8);
+
 }
 .secao4{
   grid-template-columns: 100%;
@@ -631,6 +638,7 @@ body {
   grid-template-columns: 100%;
   grid-template-rows: repeat(2, auto);
   justify-items: center;
+    background: #2778af;
 }
 .A-redes-sociais-footer{
   padding: 0;
@@ -648,7 +656,7 @@ body {
 }
   .A-redes-sociais-footer::before{
     content: "";
-    background: #2778af;
+    background: #8bc1e5;
     display: block;
     margin: 0 auto;
     height: 3px;
@@ -758,7 +766,7 @@ body {
 	text-transform: uppercase;
 }
 .bhead {
-	font-family: font-header;
+	font-family: font-slogan;
 	font-size: 1.25em;
 	font-weight: 200;
 }
@@ -785,7 +793,7 @@ body {
 	background-color: #d7844c;
 	box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
 	text-align: center;
-	font-family: font-header;
+	font-family: font-slogan;
 	font-size: 1.3em;
   font-weight: 900;
   outline: 3px solid #d7844c;
