@@ -767,7 +767,7 @@ body {
 	text-transform: uppercase;
 }
 .bhead {
-	font-family: font-slogan;
+	/* font-family: font-slogan; */
 	font-size: 1.25em;
 	font-weight: 200;
 }
@@ -820,4 +820,24 @@ body {
 .redes-sociais li {
 	display: inline-block;
 }
-
+  /* ############################################
+   ###################  AGUARDANDO ################
+   ############################################ */
+   .aguardando{
+    grid-template-columns: 100%;
+      background:linear-gradient(135deg, #5b247a 0%,#1bcedf 100%);
+    padding: 10px;
+    
+  }
+  .A-steps-aguardadendo li{
+    line-height: 2em;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  @media (min-width: 992px) {
+    .aguardando {
+      padding: 40px;
+      height: 100vh;
+      margin: 0;
+    }
+    }

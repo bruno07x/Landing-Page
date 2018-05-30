@@ -72,19 +72,20 @@ $(function () {
 $(function(){
     $('.form-jquery').submit(function(){
         var dados = $(this).serialize();
-         
+
+        // Função para redirecionar página
+        function redirecionar(){window.location.assign("aguardando.php");};
+
         $.ajax({
             url: 'validacao.php',
             data: dados,
             type: 'POST',
             dataType: 'json',
             beforeSend: function () {  
-                $('.load').fadeIn();
+                $('.load').fadeIn(500);
             },
             success: function (response) {
-                $('.load').fadeOut(500);
-                console.log(response.Alerta);
-                
+                $('.load').fadeOut(500);                
 
                 if (response.Alerta) {
                     $('.box').html('<p class="boxErro alerta text-center">'+ response.Alerta +'</p>');              
@@ -93,11 +94,12 @@ $(function(){
                     $('.box').html('<p class="boxErro erro text-center">'+ response.Erro +'</p>');
                 } 
                 else {
-                    $('.box').html('<p class="boxErro sucesso text-center">'+ response.Sucesso +'</p>');
+                    // $('.box').html('<p class="boxErro sucesso text-center">'+ response.Sucesso +'</p>').delay(2000);
+                    redirecionar();
                 }
             }
         });
-
+        // Previne o carregamento da pag ao clicar no button do formulário
         return false;  
     });
 

@@ -26,7 +26,8 @@
         }else{
             $Inserir = new Inserir();
             $Inserir->InserirBD($Tabela, $Post);
-            $Json['Sucesso'] = 'Cadastro efetuado com sucesso';
+            $Json['Sucesso'] = 'Cadastro efetuado com sucesso, você será redirecionado.';
+            
         }
     }
 
