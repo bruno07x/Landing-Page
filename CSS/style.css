@@ -352,7 +352,6 @@ body {
   font-family: font-body;
   color: #24323d;
 }
-
 .grid {
 	display: grid;
 	margin: 0 auto;
@@ -612,6 +611,9 @@ body {
   padding: 0px;
   margin-top: 0;
 }
+.ul-secao4 li{
+  background:linear-gradient(135deg, #5b247a 0%,#1bcedf 100%);
+}
 .h2-sanfona-secao4{
   background: rgba( 39, 120, 175, 0.9);
   cursor: pointer;
@@ -791,15 +793,25 @@ body {
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #FFFFFF;
-	background-color: #d7844c;
-	box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+  /* background-color: #d7844c; */
+  background:linear-gradient(135deg, #f2d50f 0%,#da0641 100%);
+	box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.3);
 	text-align: center;
 	font-family: font-slogan;
 	font-size: 1.3em;
   font-weight: 900;
-  outline: 3px solid #d7844c;
-  border: 3px solid #fff;
+  /* outline: 3px solid #d7844c; */
+  border: none;
+  border-radius: 0.15em;
   cursor: pointer;
+
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+}
+.btn:hover{
+  /* transform: scale(1.2); */
+  transform: translateY(-8px);
 }
 .secao4-footer {
 	box-sizing: border-box;
@@ -839,5 +851,33 @@ body {
       padding: 40px;
       height: 100vh;
       margin: 0;
+    } 
     }
+
+      /* ############################################
+   ###################  EFEITOS ################
+   ############################################ */
+    .opacity{
+      opacity: 0.5;
+      /* transition-timing-function: ease; */
+      transition-property: opacity;
+      transition-duration: 1s;
     }
+    .opacity:hover{
+      opacity: 1;
+    }
+    /* .hvr-float {
+      display: inline-block;
+      vertical-align: middle;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      -moz-osx-font-smoothing: grayscale;
+      transition-duration: 0.3s;
+      transition-property: transform;
+      transition-timing-function: ease-out;
+    }
+    .hvr-float:hover,
+    .hvr-float:focus,
+    .hvr-float:active {
+      transform: translateY(-8px);
+    } */

@@ -102,6 +102,10 @@ $(function(){
         // Previne o carregamento da pag ao clicar no button do formulário
         return false;  
     });
-
-
 });
+
+// $(function(){
+//     $('.btn').mouseover(function(){
+//         $(this).addClass('animated pulse');
+//     });
+// });

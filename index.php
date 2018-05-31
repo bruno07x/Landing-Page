@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="CSS/animate.css">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Nike HyperAdapt</title>
 </head>
@@ -40,7 +41,7 @@
             </div>
             <!-- FIM MODAL -->
             <div class="A-btn-secao1">
-                <a href="#ex1" rel="modal:open" class="btn">Reserve</a>
+                <a href="#ex1" rel="modal:open" class="btn hvr-float">Reserve</a>
             </div>
             <div id="countbox" class="A-cont m-t-0 text-center"></div>
         </div>
@@ -60,7 +61,7 @@
                 </p>
             </div>
             <div class="A-img-secao2">
-                <img class="img-secao2" src="IMG/tenis.png" alt="tênis nike">
+                <img class="img-secao2 opacity" src="IMG/tenis.png" alt="tênis nike">
             </div>
             <div class="A-frase2-secao2 text-center">
                 <h3 class="slogan">Tecnologia e conforto na sola dos pés</h3>
@@ -70,7 +71,7 @@
     <section>
         <div class="grid-full secao3">
             <div class="A-img-secao3">
-                <img class="" src="IMG/bg2_min.png" alt="Calçado nike">
+                <img class="opacity" src="IMG/bg2_min.png" alt="Calçado nike">
             </div>
             <div class="A-frase-secao3">
                 <h1 class="slogan white text-center">Faça parte desta evolução!</h1>
@@ -86,29 +87,29 @@
                 <p class="slogan text-center">Perguntas frequentes:</p>
             </div>
             <ul class="ul-secao4 m-b-1">
-                <li class="">
-                    <p class="h2-sanfona-secao4 bhead cinza">→ O que acompanha o produto?</p>
+                <li class="white">
+                    <p class="h2-sanfona-secao4 bhead">→ O que acompanha o produto?</p>
                     <div class="sanfona">
                         <p class="">O produto vem acompanhado com 2 pares de carregadores com plug magnético, um manual de inicio rápido
                             com QR code para baixar o app</p>
                     </div>
                 </li>
-                <li>
-                    <p class="h2-sanfona-secao4 bhead cinza">→ Como controlo a iluminação do calçado?</p>
+                <li class="white">
+                    <p class="h2-sanfona-secao4 bhead">→ Como controlo a iluminação do calçado?</p>
                     <div class="sanfona">
                         <p class="">Através do app você consegue configurar a cor com o código hexadecimal ou simplesmente arrastando
                             para o lado da cor favorita.</p>
                     </div>
                 </li>
-                <li>
-                    <p class="h2-sanfona-secao4 bhead cinza">→ Por outro lado, a competitividade nas transações?</p>
+                <li class="white">
+                    <p class="h2-sanfona-secao4 bhead">→ Por outro lado, a competitividade nas transações?</p>
                     <div class="sanfona">
                         <p class="">Gostaria de enfatizar que o consenso sobre a necessidade de qualificação agrega Gostaria de enfatizar
                             que o consenso sobre a necessidade de qualificação agrega .</p>
                     </div>
                 </li>
-                <li>
-                    <p class="h2-sanfona-secao4 bhead cinza">→ Valor ao estabelecimento dos métodos?</p>
+                <li class="white">
+                    <p class="h2-sanfona-secao4 bhead">→ Valor ao estabelecimento dos métodos?</p>
                     <div class="sanfona">
                         <p class="">Gostaria de enfatizar que o consenso sobre a necessidade de qualificação agrega Gostaria de enfatizar
                             que o consenso sobre a necessidade de qualificação agrega .</p>
