@@ -60,15 +60,15 @@
             GetCount();
         }
 
-
+// Efeito sanfona na SECA0 4
 $(function () {
-    // Efeito sanfona na SECA0 4
     $(".h2-sanfona-secao4").on("click", function(){
         esse = $(this);
         esse.parent().find('.sanfona').slideToggle("slow");
     });    
 });
 
+// SUBMIT
 $(function(){
     $('.form-jquery').submit(function(){
         var dados = $(this).serialize();
@@ -104,8 +104,71 @@ $(function(){
     });
 });
 
-// $(function(){
-//     $('.btn').mouseover(function(){
-//         $(this).addClass('animated pulse');
-//     });
+// Função que aciona MODAL
+function initModal(modal) 
+{  
+    // Var = armazena a modal passada como parametro
+    var modal = document.getElementById(modal);
+    // Adiciona a classe show para exibir modal
+    modal.classList.add('show');
+    // Caso usuário clicar fora do campo da modal ou no botão fechar, modal se fecha
+    modal.addEventListener('click', function (e) {
+        if (e.target.id == 'modalID' || e.target.className == 'fechar') {
+            modal.classList.remove('show');
+        }
+      });
+}
+// Var = armazena o btn que irá acionar a modal
+// var btn = document.querySelector('.btn-modal');
+
+// Sempre que houver um clique no btn a modal irá se acionar
+// btn.addEventListener('click', function () {  
+//     initModal('modalID');
 // });
+
+$(function(){
+    var btn = $('.btn-modal');
+    btn.click(function(){
+        initModal('modalID');
+    });
+    
+});
+
+// Debounce para não ficar executando o efeito
+debounce = function(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+// Função para animação com scroll
+(function(){
+var target = $('.anime');
+var start = 'anime-start';
+var offsetTela = $(window).height() * 3/4;
+
+function animeScroll(){
+    var documentTop = $(document).scrollTop();
+    target.each(function () {
+        var itemTop = $(this).offset().top;
+        if (documentTop > itemTop - offsetTela) {
+            $(this).addClass(start);
+        }
+      });
+};
+animeScroll();
+$(function(){
+    $(document).scroll(debounce (function(){
+        animeScroll();
+    },200));
+});
+}());

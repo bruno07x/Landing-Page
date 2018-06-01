@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <link rel="stylesheet" href="CSS/animate.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
+    <!-- <link rel="stylesheet" href="CSS/animate.css"> -->
     <link rel="stylesheet" href="CSS/style.css">
     <title>Nike HyperAdapt</title>
 </head>
@@ -22,42 +22,25 @@
             <div class="A-frase-secao1">
                 <h1 class="slogan text-center white">Just do it!</h1>
             </div>
-            <!-- MODAL -->
-            <div id="ex1" class="modal modal-style">
-                <p class="text-center white bhead">Não perca tempo!
-                    <br> Faça parte desta evolução.</p>
-                <form method="post" class="form-modal form-jquery">
-                    <span class="white byline">Nome:</span>
-                    <input type="text" name="nome" required="" class="area-input">
-                    <span class="white byline">Email:</span>
-                    <input type="email" name="email" class="area-input">
-                    <div class="text-center m-t-1">
-                        <button class="btn" type="submit">Reserve</button>
-                        <!-- <a href="#" class="btn">Reserve!</a> -->
-                    </div>
-                    <img src="IMg/load.gif" class="load" alt="Carregando...">
-                </form>
-            <div class="box"></div>
-            </div>
-            <!-- FIM MODAL -->
             <div class="A-btn-secao1">
-                <a href="#ex1" rel="modal:open" class="btn hvr-float">Reserve</a>
+                <a class="btn btn-modal">Reserve</a>
             </div>
             <div id="countbox" class="A-cont m-t-0 text-center"></div>
         </div>
     </section>
-    <section class="bg-secao2">
+    <section class="bg-secao2 anime">
         <div class="grid secao2">
             <div class="A-frase1-secao2 text-center">
                 <h1 class="slogan">Eis aqui uma nova concepção de calçado!</h1>
             </div>
             <div class="A-beneficios">
                 <p class="beneficio bhead azul-strong">
-                    Se ajusta automaticamente aos pés, com um controle de iluminação RGB e contador de passos e calorias. Tudo o que você precisa para ser uma pessoa de sucesso.
+                    Se ajusta automaticamente aos pés, com um controle de iluminação RGB e contador de passos e calorias. Tudo o que você precisa
+                    para ser uma pessoa de sucesso.
                 </p>
                 <p class="m-t-1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat imperdiet feugiat. Nunc mi nisl.Lorem
-                    ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat imperdiet feugiat. Nunc mi nisl.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat imperdiet feugiat. Nunc mi nisl.Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Cras placerat imperdiet feugiat. Nunc mi nisl.
                 </p>
             </div>
             <div class="A-img-secao2">
@@ -68,7 +51,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="anime">
         <div class="grid-full secao3">
             <div class="A-img-secao3">
                 <img class="opacity" src="IMG/bg2_min.png" alt="Calçado nike">
@@ -77,11 +60,11 @@
                 <h1 class="slogan white text-center">Faça parte desta evolução!</h1>
             </div>
             <div class="A-btn-secao3">
-                <a href="#ex1" rel="modal:open" class="btn">Reserve</a>
+                <a class="btn btn-modal">Reserve</a>
             </div>
         </div>
     </section>
-    <section class="bg-secao4">
+    <section class="bg-secao4 anime">
         <div class="grid-full secao4">
             <div class="A-frase-secao4">
                 <p class="slogan text-center">Perguntas frequentes:</p>
@@ -142,6 +125,30 @@
             </ul>
         </div>
     </section>
+
+    <!-- MODAL -->
+    <div id="modalID" class="A-modal">
+        <div  class="modal">
+            <a href="#">
+                <img src="IMG/fechar.svg" class="fechar" alt="[botão fechar]" title="botão fechar">
+            </a>
+            <p class="text-center white bhead">Não perca tempo!
+                <br> Faça parte desta evolução.</p>
+            <form method="post" class="form-modal form-jquery">
+                <span class="white byline">Nome:</span>
+                <input type="text" name="nome" required="" class="area-input">
+                <span class="white byline">Email:</span>
+                <input type="email" name="email" class="area-input">
+                <div class="text-center m-t-1">
+                    <button class="btn" type="submit">Reserve</button>
+                    <!-- <a href="#" class="btn">Reserve!</a> -->
+                </div>
+                <img src="IMg/load.gif" class="load" alt="Carregando...">
+            </form>
+            <div class="box"></div>
+        </div>
+    </div>
+    <!-- FIM MODAL -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script type="text/javascript" src="JS/script.js"></script>

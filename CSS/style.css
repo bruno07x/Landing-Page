@@ -669,15 +669,38 @@ body {
 /* ############################################
    ###################  MODAL #################
    ############################################ */
-
-.modal-style {
-  /* background: rgba(127, 143, 166, 0.9); */
-  background: rgba( 39, 120, 175, 0.8);
-  padding: 30px;
+.A-modal{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8);
 }
-.modal-style button{
+.modal {
+  /* background: rgba(127, 143, 166, 0.9); */
+  background: rgba( 39, 120, 175, 0.9);
+  padding: 30px;
+  position: relative;
+}
+.A-modal.show{
+  display: grid;
+}
+.modal button{
   float: right;
   margin-right: 30px;
+}
+.fechar{
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background:linear-gradient(135deg, #5b247a 0%,#1bcedf 100%);
+  border-radius: 50%;
+  box-shadow: -3px 3px 5px #24323d;
 }
 .area-input {
 	width: 90%;
@@ -866,18 +889,27 @@ body {
     .opacity:hover{
       opacity: 1;
     }
-    /* .hvr-float {
-      display: inline-block;
-      vertical-align: middle;
-      transform: translateZ(0);
-      backface-visibility: hidden;
-      -moz-osx-font-smoothing: grayscale;
-      transition-duration: 0.3s;
-      transition-property: transform;
-      transition-timing-function: ease-out;
+
+    /* Efeito modal */
+    @keyframes modal{
+      from{
+        opacity: 0;
+        transform: translate3d(100px, 0, 0);
+      }
+      to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
     }
-    .hvr-float:hover,
-    .hvr-float:focus,
-    .hvr-float:active {
-      transform: translateY(-8px);
-    } */
+    .show .modal{
+      animation: modal 1s;
+    }
+    .anime{
+      opacity: 0;
+      transform: translate3d(-100px, 0, 0);
+      transition: .5s;
+    }
+    .anime-start{
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
