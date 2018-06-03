@@ -11,7 +11,7 @@
 
     
     
-    require ('_Mercurio/config.inc.php');
+    require ('/_Mercurio/config.inc.php');
 
     if (isset($Post)) {
         $Ler = new Ler();

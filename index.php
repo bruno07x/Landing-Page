@@ -17,7 +17,7 @@
     <section class="bg-secao1">
         <div class="grid secao1">
             <div class="A-logo m-t-1">
-                <img class="logo" src="img/nike_icon.png">
+                <img class="logo" src="IMG/nike_icon.png">
             </div>
             <div class="A-frase-secao1">
                 <h1 class="slogan text-center white">Just do it!</h1>
@@ -70,31 +70,31 @@
                 <p class="slogan text-center">Perguntas frequentes:</p>
             </div>
             <ul class="ul-secao4 m-b-1">
-                <li class="white">
+                <li class="white m-x-1">
                     <p class="h2-sanfona-secao4 bhead">→ O que acompanha o produto?</p>
                     <div class="sanfona">
-                        <p class="">O produto vem acompanhado com 2 pares de carregadores com plug magnético, um manual de inicio rápido
+                        <p class="cinza">O produto vem acompanhado com 2 pares de carregadores com plug magnético, um manual de inicio rápido
                             com QR code para baixar o app</p>
                     </div>
                 </li>
-                <li class="white">
+                <li class="white m-x-1">
                     <p class="h2-sanfona-secao4 bhead">→ Como controlo a iluminação do calçado?</p>
                     <div class="sanfona">
-                        <p class="">Através do app você consegue configurar a cor com o código hexadecimal ou simplesmente arrastando
+                        <p class="cinza">Através do app você consegue configurar a cor com o código hexadecimal ou simplesmente arrastando
                             para o lado da cor favorita.</p>
                     </div>
                 </li>
-                <li class="white">
+                <li class="white m-x-1">
                     <p class="h2-sanfona-secao4 bhead">→ Por outro lado, a competitividade nas transações?</p>
                     <div class="sanfona">
-                        <p class="">Gostaria de enfatizar que o consenso sobre a necessidade de qualificação agrega Gostaria de enfatizar
+                        <p class="cinza">Gostaria de enfatizar que o consenso sobre a necessidade de qualificação agrega Gostaria de enfatizar
                             que o consenso sobre a necessidade de qualificação agrega .</p>
                     </div>
                 </li>
-                <li class="white">
+                <li class="white m-x-1">
                     <p class="h2-sanfona-secao4 bhead">→ Valor ao estabelecimento dos métodos?</p>
                     <div class="sanfona">
-                        <p class="">Gostaria de enfatizar que o consenso sobre a necessidade de qualificação agrega Gostaria de enfatizar
+                        <p class="cinza">Gostaria de enfatizar que o consenso sobre a necessidade de qualificação agrega Gostaria de enfatizar
                             que o consenso sobre a necessidade de qualificação agrega .</p>
                     </div>
                 </li>
@@ -104,7 +104,7 @@
     <section>
         <div class="grid-full footer">
             <div class="A-logo-secao5 m-y-0">
-                <img class="logo-footer" src="img/nike_icon.png">
+                <img class="logo-footer" src="IMG/nike_icon.png">
             </div>
             <ul class="A-redes-sociais-footer text-center">
                 <li>
@@ -128,10 +128,8 @@
 
     <!-- MODAL -->
     <div id="modalID" class="A-modal">
-        <div  class="modal">
-            <a href="#">
-                <img src="IMG/fechar.svg" class="fechar" alt="[botão fechar]" title="botão fechar">
-            </a>
+        <div class="modal">
+            <img src="IMG/fechar.svg" class="fechar" alt="[botão fechar]" title="botão fechar">
             <p class="text-center white bhead">Não perca tempo!
                 <br> Faça parte desta evolução.</p>
             <form method="post" class="form-modal form-jquery">
@@ -143,7 +141,7 @@
                     <button class="btn" type="submit">Reserve</button>
                     <!-- <a href="#" class="btn">Reserve!</a> -->
                 </div>
-                <img src="IMg/load.gif" class="load" alt="Carregando...">
+                <img src="IMG/load.gif" class="load" alt="Carregando...">
             </form>
             <div class="box"></div>
         </div>

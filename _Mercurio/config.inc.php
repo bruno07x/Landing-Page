@@ -68,6 +68,6 @@ set_error_handler('MsgErro');
   Configurações do banco de dados
  * ########################################################################################### */
 define('HOST', 'localhost');
-define('PASS', '');
-define('USER', 'root');
+define('PASS', 'bruno@couto@@');
+define('USER', 'cleoalexandre_teste');
 define('DBA', 'landingpagenike');
