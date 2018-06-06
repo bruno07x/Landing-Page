@@ -22,8 +22,8 @@ abstract class ConexaoBD {
                 $Options = [PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'];
                 self::$Connect = new PDO($Dsn, self::$User, self::$Pass, $Options);
             }
-        } catch (\PDOException $e) {
-            MsgErro($e->getCode, $e->getMessage, $e->getFile, $e->getLine);
+        } catch (PDOException $e) {
+            MsgErro($e->getCode(), $e->getMessage(), $e->getFile(), $e->getLine());
             die();
         }
         self::$Connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

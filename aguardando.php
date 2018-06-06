@@ -22,10 +22,11 @@
                     para compra!
                 </p>
             </div>
-            <ul class="A-steps-aguardadendo text-center">
-                <li>1. Encontre o e-mail.</li>
-                <li>2. Abra-o.</li>
-                <li>3. Clique no link</li>
+            <ul class="A-steps-aguardadendo bhead">
+                <li>1. Abra seu e-mail (hotmail, yahoo, gmail ou o que você costuma usar para acessar).</li>
+                <li>2. Encontre o e-mail: [CONFIRMAÇÃO] Falta pouco para garantir sua reserva.</li>
+                <li>3. Clique no link de confirmação no corpo do e-mail.</li>
+                <li><b>Obs: </b>caso não encontre o e-mail na sua caixa de entrada de uma olhada na sua pasta de spam, ou no caso do gmail na aba de promoções ou social. Aproveite e mova o e-mail para a caixa de entrada, assim você não perde nenhuma mensagem nossa. </li>
             </ul>
             <div class="A-footer-aguardadendo text-center">
                 <p class="laranja slogan">pronto!</p>

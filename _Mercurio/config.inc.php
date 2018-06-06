@@ -6,20 +6,37 @@
   especificado pelo próprio.
  * ########################################################################################### */
 
-function __autoload($nomeClasse) {
-    $diretorios = ['Conn', 'Helper'];
-    $diretorioOk = null;
+// function __autoload($nomeClasse) {
+//     $diretorios = ['Conn', 'Helper'];
+//     $diretorioOk = null;
 
-    foreach ($diretorios as $value) {
-        if (!$diretorioOk && file_exists(__DIR__ . "\\{$value}\\{$nomeClasse}.class.php") && !is_dir(__DIR__ . "\\{$value}\\{$nomeClasse}.class.php")) {
-            include_once (__DIR__ . "\\{$value}\\{$nomeClasse}.class.php");
-            $diretorioOk = true;
-        }
-    }
-    if (!$diretorioOk) {
-        MsgErro(SYS_Erro, "Erro ao incluir a classe <b>==> {$nomeClasse} <==</b>", __FILE__, __LINE__);
+//     foreach ($diretorios as $value) {
+//         if (!$diretorioOk && file_exists(__DIR__ . "\\{$value}\\{$nomeClasse}.class.php") && !is_dir(__DIR__ . "\\{$value}\\{$nomeClasse}.class.php")) {
+//             include_once (__DIR__ . "\\{$value}\\{$nomeClasse}.class.php");
+//             $diretorioOk = true;
+//         }
+//     }
+//     if (!$diretorioOk) {
+//         MsgErro(SYS_Erro, "Erro ao incluir a classe <b>==> {$nomeClasse} <==</b>", __FILE__, __LINE__);
+//         die();
+//     }
+// }
+function __autoload($Class) {
+
+    $cDir = ['Conn', 'Helper', 'Models'];
+    $iDir = null;
+
+    foreach ($cDir as $dirName):
+        if (!$iDir && file_exists(__DIR__ . DIRECTORY_SEPARATOR . $dirName . DIRECTORY_SEPARATOR . $Class . '.class.php') && !is_dir(__DIR__ . DIRECTORY_SEPARATOR . $dirName . DIRECTORY_SEPARATOR . $Class . '.class.php')):
+            include_once (__DIR__ . DIRECTORY_SEPARATOR . $dirName . DIRECTORY_SEPARATOR . $Class . '.class.php');
+            $iDir = TRUE;
+        endif;
+    endforeach;
+
+    if (!$iDir):
+        MsgErro(SYS_Erro, "Erro ao incluir a classe <b>==> {$Class} <==</b>", __FILE__, __LINE__);
         die();
-    }
+    endif;
 }
 
 /* ###########################################################################################
@@ -70,4 +87,4 @@ set_error_handler('MsgErro');
 define('HOST', 'localhost');
 define('PASS', 'bruno@couto@@');
 define('USER', 'cleoalexandre_teste');
-define('DBA', 'landingpagenike');
+define('DBA', 'cleoalexandre_teste');

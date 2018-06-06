@@ -624,6 +624,18 @@ body {
   margin: 0;
   padding: 10px;
 }
+.h2-sanfona-secao4::after{
+  content: "";
+  display: table;
+  margin: 5px auto 0;
+  width: 0%;
+  height: 2px;
+  background-color:rgba(255, 255, 255, 0.6);
+  transition: all 0.3s linear;
+}
+.h2-sanfona-secao4:hover::after{
+  width: 100%;
+}
 @media (min-width: 992px) {
   .secao4{
     grid-template-columns: 50% 50%;
@@ -886,14 +898,12 @@ body {
    ############################################ */
    .aguardando{
     grid-template-columns: 100%;
-      background:linear-gradient(135deg, #5b247a 0%,#1bcedf 100%);
+      background:linear-gradient(135deg, #1bcedf 0%,#5b247a 100%);
     padding: 10px;
     
   }
   .A-steps-aguardadendo li{
     line-height: 2em;
-    font-weight: bold;
-    font-size: 1.5em;
   }
   @media (min-width: 992px) {
     .aguardando {
