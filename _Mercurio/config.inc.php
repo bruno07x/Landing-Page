@@ -5,22 +5,6 @@
   o valor informado pelo operador NEW e verificar se há alguma classe com o nome
   especificado pelo próprio.
  * ########################################################################################### */
-
-// function __autoload($nomeClasse) {
-//     $diretorios = ['Conn', 'Helper'];
-//     $diretorioOk = null;
-
-//     foreach ($diretorios as $value) {
-//         if (!$diretorioOk && file_exists(__DIR__ . "\\{$value}\\{$nomeClasse}.class.php") && !is_dir(__DIR__ . "\\{$value}\\{$nomeClasse}.class.php")) {
-//             include_once (__DIR__ . "\\{$value}\\{$nomeClasse}.class.php");
-//             $diretorioOk = true;
-//         }
-//     }
-//     if (!$diretorioOk) {
-//         MsgErro(SYS_Erro, "Erro ao incluir a classe <b>==> {$nomeClasse} <==</b>", __FILE__, __LINE__);
-//         die();
-//     }
-// }
 function __autoload($Class) {
 
     $cDir = ['Conn', 'Helper', 'Models'];
@@ -38,6 +22,15 @@ function __autoload($Class) {
         die();
     endif;
 }
+
+/* ###########################################################################################
+  Configurações do E-mail
+ * ########################################################################################### */
+define('MAILSAIDA', 'mail.cleoalexandreonline.com.br');
+define('MAILPORT', '587');
+define('MAILUSER', 'contato@cleoalexandreonline.com.br');
+define('MAILPASS', 'contato@cleo@alexandre@@');
+
 
 /* ###########################################################################################
   Função usada para apresentar mensagens de erros
