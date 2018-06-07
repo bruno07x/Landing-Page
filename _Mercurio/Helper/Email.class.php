@@ -1,6 +1,7 @@
 <?php
 // Incluir classe PHPMailer
-require('_app/Library/PHPMailer/class.phpmailer.php');
+// require('_app/Library/PHPMailer/class.phpmailer.php');
+require('_Mercurio/PHPMailer/PHPMailer.class.php');
 
 /**
  * Email [ MODEL ]
@@ -52,11 +53,11 @@ class Email {
      * <b>REQUER DADOS ESPECÍFICOS:</b> Para enviar o e-mail você deve montar um array atribuitivo com os
      * seguintes índices corretamente povoados:<br><br>
      * <i>
-     * Assunto<br>
-     * Mensagem<br>
-     * RemetenteNome<br>
-     * RemetenteEmail<br>
-     * DestinoNome<br>
+     * Assunto
+     * Mensagem
+     * RemetenteNome
+     * RemetenteEmail
+     * DestinoNome
      * DestinoEmail
      * </i>
      */

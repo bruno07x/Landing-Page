@@ -135,9 +135,9 @@
                 <br> Faça parte desta evolução.</p>
             <form method="post" class="form-modal form-jquery">
                 <span class="white byline">Nome:</span>
-                <input type="text" name="nome" required="" class="area-input">
+                <input type="text" name="DestinoNome" required="" class="area-input">
                 <span class="white byline">Email:</span>
-                <input type="email" name="email" class="area-input">
+                <input type="email" name="DestinoEmail" class="area-input">
                 <div class="text-center m-t-1">
                     <button class="btn" type="submit">Reserve</button>
                     <!-- <a href="#" class="btn">Reserve!</a> -->

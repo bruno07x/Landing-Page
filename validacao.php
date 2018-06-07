@@ -15,19 +15,28 @@
 
     if (isset($Post)) {
         $Ler = new Ler();
-        $Ler->LerBD($Tabela, "WHERE email = :email", "email={$Post['email']}");
+        $Ler->LerBD($Tabela, "WHERE email = :email", "email={$Post['DestinoEmail']}");
 
         if ($Ler->getResult()) {
             $Json['Alerta'] = 'E-mail já cadastrado';
         }
 
-        elseif(!Check::Email($Post['email'])){
-            $Json['Erro'] = "Email fora do padrao aceito {$Post['email']}";
+        elseif(!Check::Email($Post['DestinoEmail'])){
+            $Json['Erro'] = "Email fora do padrao aceito {$Post['DestinoEmail']}";
         }else{
             $Inserir = new Inserir();
-            $Inserir->InserirBD($Tabela, $Post);
+            // $Inserir->InserirBD($Tabela, $Post);
             $Json['Sucesso'] = 'Cadastro efetuado com sucesso, você será redirecionado.';
-            
+
+            $Post['Assunto'] = 'Nike HyperAdapt 1.0';
+            $Post['Mensagem'] = 'Clique no link a baixo para confirmar o e-mail';
+            $Post['RemetenteNome'] = 'Equipe Nike';
+            $Post['RemetenteEmail'] = 'brunnohcouto@gmail.com';
+
+            print_r($Post);
+
+            $Email = new Email;
+            // $Email->Enviar($Post);
         }
     }
 
