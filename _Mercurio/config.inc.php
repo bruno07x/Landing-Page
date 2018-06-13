@@ -7,7 +7,7 @@
  * ########################################################################################### */
 function __autoload($Class) {
 
-    $cDir = ['Conn', 'Helper', 'Models'];
+    $cDir = ['Conn', 'Helper', 'Models', 'PHPMailer'];
     $iDir = null;
 
     foreach ($cDir as $dirName):
