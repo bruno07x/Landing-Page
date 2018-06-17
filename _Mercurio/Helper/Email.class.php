@@ -1,20 +1,22 @@
 <?php
-// Incluir classe PHPMailer
-// require('_app/Library/PHPMailer/class.phpmailer.php');
-require('_Mercurio/PHPMailer/PHPMailer.class.php');
+
+// require_once '/../PHPMailer/PHPMailer.php';
+// require_once '/../PHPMailer/SMTP.php';
+require_once __DIR__ . '/../PHPMailer/PHPMailer.php';
+require_once __DIR__ . '/../PHPMailer/SMTP.php';
 
 /**
  * Email [ MODEL ]
- * Modelo responável por configurar a PHPMailer, validar os dados e disparar e-mails do sistema!
+ * Modelo responsável por configurar a PHPMailer, validar os dados e disparar e-mails do sistema!
+ * 
+ * @copyright (c) year, Robson V. Leite UPINSIDE TECNOLOGIA
  */
 class Email {
 
     /** @var PHPMailer */
-    // Atributo para usar classe PHPMailer
-    private $Mail;
+    public $Mail;
 
     /** EMAIL DATA */
-    // Será um array que receberá os dados vindos de fora.
     private $Data;
 
     /** CORPO DO E-MAIL */
@@ -22,12 +24,10 @@ class Email {
     private $Mensagem;
 
     /** REMETENTE */
-    // Dados de quem irá enviar o e-mail
     private $RemetenteNome;
     private $RemetenteEmail;
 
     /** DESTINO */
-    // Dados de quem irá receber o e-mail
     private $DestinoNome;
     private $DestinoEmail;
 
@@ -35,15 +35,17 @@ class Email {
     private $Error;
     private $Result;
 
-    // Alterando o comportamento inicial da classe
     function __construct() {
         $this->Mail = new PHPMailer;
-        // Constantes configuradas na classe de inicialização
-        $this->Mail->Host = MAILSAIDA;
-        $this->Mail->Port = MAILPORT;
-        $this->Mail->Username = MAILUSER;
-        $this->Mail->Password = MAILPASS;
-        $this->Mail->CharSet = 'UTF-8';
+        $this->Mail->Host = MAIL_HOST;
+        $this->Mail->Port = MAIL_PORT;
+        $this->Mail->Username = MAIL_SMTP;
+        $this->Mail->Password = MAIL_PASS;
+        $this->Mail->SMTPAuth = true;
+        
+        if(!empty(MAIL_MODE)):
+            $this->Mail->SMTPSecure = MAIL_MODE;
+        endif;
     }
 
     /**
@@ -53,12 +55,12 @@ class Email {
      * <b>REQUER DADOS ESPECÍFICOS:</b> Para enviar o e-mail você deve montar um array atribuitivo com os
      * seguintes índices corretamente povoados:<br><br>
      * <i>
-     * Assunto
-     * Mensagem
-     * RemetenteNome
-     * RemetenteEmail
-     * DestinoNome
-     * DestinoEmail
+     * &raquo; Assunto<br>
+     * &raquo; Mensagem<br>
+     * &raquo; RemetenteNome<br>
+     * &raquo; RemetenteEmail<br>
+     * &raquo; DestinoNome<br>
+     * &raquo; DestinoEmail
      * </i>
      */
     public function Enviar(array $Data) {
@@ -66,16 +68,37 @@ class Email {
         $this->Clear();
 
         if (in_array('', $this->Data)):
-            $this->Error = ['Erro ao enviar mensagem: Para enviar esse e-mail. Preencha os campos requisitados!', SYS_Alerta];
+            $this->Error = "<b>ERRO AO ENVIAR E-MAIL:</b> Dados informados são insuficientes para disparo de mensagem!";
             $this->Result = false;
         elseif (!Check::Email($this->Data['RemetenteEmail'])):
-            $this->Error = ['Erro ao enviar mensagem: O e-mail que você informou não tem um formato válido. Informe seu E-mail!', SYS_Alerta];
+            $this->Error = "<b>ERRO AO ENVIAR E-MAIL:</b> O endereço de e-mail informado para o remetente não tem um formato válido!";
             $this->Result = false;
         else:
+            $Data['RemetenteNome'] = ($Data['RemetenteNome'] != 'null' ? $Data['RemetenteNome'] : null);
             $this->setMail();
             $this->Config();
             $this->sendMail();
         endif;
+    }
+
+    /**
+     * <b>Montar e Enviar:</b> Execute este método para facilitar o envio. Informando os parâmetros solicitados para montar a data! 
+     */
+    public function EnviarMontando($Assunto, $Mensagem, $RemetenteNome, $RemetenteEmail, $DestinoNome, $DestinoEmail) {
+        $Data['Assunto'] = $Assunto;
+        $Data['Mensagem'] = $Mensagem;
+        $Data['RemetenteNome'] = $RemetenteNome;
+        $Data['RemetenteEmail'] = $RemetenteEmail;
+        $Data['DestinoNome'] = $DestinoNome;
+        $Data['DestinoEmail'] = $DestinoEmail;
+        $this->Enviar($Data);
+    }
+
+    /**
+     * <b>Enviar Anexo:</b> Efetue o Upload da imagem com a classe de upload. Com o getResult() deste envio, basta anexar ao e-mail! 
+     */
+    public function addFile($File) {
+        $this->File = $this->Mail->addAttachment($File);
     }
 
     /**
@@ -89,7 +112,6 @@ class Email {
 
     /**
      * <b>Obter Erro:</b> Retorna um array associativo com o erro e o tipo de erro.
-     * EX. MsgErro ($Var->getError()[0], $Var->getError()[0]); 
      * @return ARRAY $Error = Array associatico com o erro
      */
     public function getError() {
@@ -116,41 +138,37 @@ class Email {
         $this->RemetenteEmail = $this->Data['RemetenteEmail'];
         $this->DestinoNome = $this->Data['DestinoNome'];
         $this->DestinoEmail = $this->Data['DestinoEmail'];
-
         $this->Data = null;
-        $this->setMsg();
-    }
-
-    //Formatar ou Personalizar a Mensagem!
-    private function setMsg() {
-        $this->Mensagem = "{$this->Mensagem}<hr><small>Recebida em: " . date('d/m/Y H:i') . "</small>";
     }
 
     //Configura o PHPMailer e valida o e-mail!
     private function Config() {
         //SMTP AUTH
+        $this->Mail->CharSet = 'utf-8';
+        $this->Mail->setLanguage('pt');
         $this->Mail->IsSMTP();
-        $this->Mail->SMTPAuth = true;
-        $this->Mail->IsHTML();
+        $this->Mail->IsHTML(true);
+
 
         //REMETENTE E RETORNO
-        $this->Mail->From = MAILUSER;
-        $this->Mail->FromName = $this->RemetenteNome;
+        $this->Mail->From = MAIL_USER;
+        $this->Mail->FromName = MAIL_SENDER;
         $this->Mail->AddReplyTo($this->RemetenteEmail, $this->RemetenteNome);
 
         //ASSUNTO, MENSAGEM E DESTINO
         $this->Mail->Subject = $this->Assunto;
-        $this->Mail->Body = $this->Mensagem;
+        $this->Mail->msgHTML($this->Mensagem);
         $this->Mail->AddAddress($this->DestinoEmail, $this->DestinoNome);
     }
 
     //Envia o e-mail!
     private function sendMail() {
         if ($this->Mail->Send()):
-            $this->Error = ['Obrigado por entrar em contato: Recebemos sua mensagem e estaremos respondendo em breve!', SYS_Sucesso];
+            $this->Error = null;
             $this->Result = true;
+            $this->Mail->clearAddresses();
         else:
-            $this->Error = ["Erro ao enviar: Entre em contato com o admin. ( {$this->Mail->ErrorInfo} )", SYS_Erro];
+            $this->Error = '<b>ERRO AO ENVIAR E-MAIL:</b> ' . $this->Mail->ErrorInfo;
             $this->Result = false;
         endif;
     }

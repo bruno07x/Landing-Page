@@ -1,4 +1,5 @@
 <?php 
+    require_once '_Mercurio/config.inc.php';
 
     $Tabela = 'reservaclientes';
     $getPost = filter_input_array(INPUT_POST, FILTER_DEFAULT);
@@ -8,10 +9,6 @@
     $Json = array();
     
     sleep(2);
-
-    
-    
-    require "_Mercurio/config.inc.php";
 
     if (isset($Post)) {
         $Ler = new Ler();
@@ -24,19 +21,18 @@
         elseif(!Check::Email($Post['DestinoEmail'])){
             $Json['Erro'] = "Email fora do padrao aceito {$Post['DestinoEmail']}";
         }else{
-            $Inserir = new Inserir();
+            $Inserir = new Inserir;
             // $Inserir->InserirBD($Tabela, $Post);
             $Json['Sucesso'] = 'Cadastro efetuado com sucesso, você será redirecionado.';
 
             $Post['Assunto'] = 'Nike HyperAdapt 1.0';
             $Post['Mensagem'] = 'Clique no link a baixo para confirmar o e-mail';
-            $Post['RemetenteNome'] = 'Equipe Nike';
-            $Post['RemetenteEmail'] = 'brunnohcouto@gmail.com';
+            $Post['RemetenteNome'] = MAIL_SENDER;
+            $Post['RemetenteEmail'] = MAIL_TESTER;
 
-            print_r($Post);
 
-            $Email = new Email;
-            // $Email->Enviar($Post);
+            $EmailEnviar = new Email;
+            $EmailEnviar->EnviarMontando($Post['Assunto'],  $Post['Mensagem'], $Post['RemetenteNome'], $Post['RemetenteEmail'], $Post['DestinoNome'], $Post['DestinoEmail']);
         }
     }
 

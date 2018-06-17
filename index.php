@@ -1,5 +1,3 @@
-<?php require "_Mercurio/config.inc.php";
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 

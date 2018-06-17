@@ -7,7 +7,7 @@
         //     }
         //   });
         // CONTADOR FORMAT AAAA/MM/DIA
-        dateFuture = new Date(2018, 5, 10);
+        dateFuture = new Date(2018, 5, 18);
 
         function GetCount() {
 

@@ -7,7 +7,7 @@
  * ########################################################################################### */
 function __autoload($Class) {
 
-    $cDir = ['Conn', 'Helper', 'Models', 'PHPMailer'];
+    $cDir = ['Conn', 'Helper', 'Models'];
     $iDir = null;
 
     foreach ($cDir as $dirName):
@@ -26,11 +26,14 @@ function __autoload($Class) {
 /* ###########################################################################################
   Configurações do E-mail
  * ########################################################################################### */
-define('MAILSAIDA', 'mail.cleoalexandreonline.com.br');
-define('MAILPORT', '587');
-define('MAILUSER', 'contato@cleoalexandreonline.com.br');
-define('MAILPASS', 'contato@cleo@alexandre@@');
-
+define('MAIL_HOST', 'mail.cleoalexandreonline.com.br'); //Servidor de e-mail
+define('MAIL_PORT', '587'); //Porta de envio
+define('MAIL_USER', 'contato@cleoalexandreonline.com.br'); //E-mail de envio
+define('MAIL_SMTP', 'contato@cleoalexandreonline.com.br'); //E-mail autenticador do envio (Geralmente igual ao MAIL_USER, exceto em serviços como AmazonSES, sendgrid...)
+define('MAIL_PASS', 'contato@cleo@alexandre@@'); //Senha do e-mail de envio
+define('MAIL_SENDER', 'Nike HyperAdapt 1.0'); //Nome do remetente de e-mail
+define('MAIL_MODE', ''); //Encriptação para envio de e-mail [0 não parametrizar / tls / ssl] (Padrão = tls)
+define('MAIL_TESTER', 'brunnohcouto@gmail.com'); //E-mail de testes (DEV)
 
 /* ###########################################################################################
   Função usada para apresentar mensagens de erros
