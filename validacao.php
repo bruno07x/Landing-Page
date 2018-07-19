@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
     require_once '_Mercurio/config.inc.php';
 
     $Tabela = 'reservaclientes';
@@ -32,7 +32,7 @@
 
 
             $EmailEnviar = new Email;
-            $EmailEnviar->EnviarMontando($Post['Assunto'],  $Post['Mensagem'], $Post['RemetenteNome'], $Post['RemetenteEmail'], $Post['DestinoNome'], $Post['DestinoEmail']);
+            $EmailEnviar->Enviar($Post);
         }
     }
 
