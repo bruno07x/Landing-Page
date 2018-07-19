@@ -1,0 +1,78 @@
+/*
+This stylesheet is writen in BEM CSS
+BLOCK = .block 
+ELEMENT = .block__element
+MODIFIER = .block__element--modifier \ .block--modifier
+*/
+
+/* Fontes escolhidas para a marca, montserrat usada para causar destaque e imprima para textos em geral */
+@import url('https://fonts.googleapis.com/css?family=Imprima|Montserrat:400,700');
+
+/* ############################################################
+########################## BLOCK ##########################
+############################################################ */
+
+/* ############################################################
+########################## ELEMENT ##########################
+############################################################ */
+
+/* ########## tipografia ########## */
+.tipografia__titulo{
+    font-size: 3.375em;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -5px;
+}
+.tipografia__subTitulo{
+    font-size: 1.6em;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+.tipografia__corpoTexto{
+    font-size: 1em;
+    font-family: 'Imprima', sans-serif;
+    font-weight: 400;
+}
+.tipografia__byline{
+    font-size: 0.618em;
+    font-family: 'Imprima', sans-serif;
+    font-weight: 400;
+}
+
+/* ########## cores ########## */
+.cores__base{
+    color: #3B83B6;
+}
+.cores__enfase{
+    color: #FFAF47;
+}
+.cores__suporteGray{
+    color: #4D4D4D;
+}
+.cores__suporteWhite{
+    color: #EFEFEF;
+}
+/* ############################################################
+########################## MODIFIER ##########################
+############################################################ */
+
+/* ########## tipografia ########## */
+.tipografia__subTitulo--segunda{
+    font-size: 1.618em;
+    font-weight: 400;
+    font-family: 'Imprima', sans-serif;
+}
+
+/* ########## cores ########## */
+.cores__base--claro{
+    color: #5C9CCA;
+}
+.cores__base--escuro{
+    color: #1E6DA5;
+}
+.cores__enfase--claro{
+    color: #FFBF6B;
+}
+.cores__enfase--escuro{
+    color: #FF9E20;
+}

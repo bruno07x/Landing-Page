@@ -1,0 +1,49 @@
+/*
+This stylesheet is writen in BEM CSS
+BLOCK = .block 
+ELEMENT = .block__element
+MODIFIER = .block__element--modifier \ .block--modifier
+*/
+
+
+/* ############################################################
+########################## BLOCK ##########################
+############################################################ */
+.button{
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(to bottom right, #FFBF6B, #FFAF47);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+}
+.contador{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #FFF;
+    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+    width: 280px;
+}
+/* ############################################################
+########################## ELEMENT ##########################
+############################################################ */
+
+/* Configurações de background do projeto */
+.background__dobra1{
+    background: url(../../IMG/section1/backgroundSection1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* altura para ser melhor para visualizar o background */
+    height: 400px;
+}
+/* ############################################################
+########################## MODIFIER ##########################
+############################################################ */
+.button:hover{
+    background: linear-gradient(to bottom right, #FFAF47, #FF9E20);
+    box-shadow: none;
+}

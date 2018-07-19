@@ -1,0 +1,22 @@
+
+    <!-- // MODAL -->
+    // <div id="modalID" class="A-modal">
+    //     <div class="modal">
+    //         <img src="IMG/fechar.svg" class="fechar" alt="[botão fechar]" title="botão fechar">
+    //         <p class="text-center white bhead">Não perca tempo!
+    //             <br> Faça parte desta evolução.</p>
+    //         <form method="post" class="form-modal form-jquery">
+    //             <span class="white byline">Nome:</span>
+    //             <input type="text" name="DestinoNome" required="" class="area-input">
+    //             <span class="white byline">Email:</span>
+    //             <input type="email" name="DestinoEmail" class="area-input">
+    //             <div class="text-center m-t-1">
+    //                 <button class="btn" type="submit">Reserve</button>
+    //                 <!-- <a href="#" class="btn">Reserve!</a> -->
+    //             </div>
+    //             <img src="IMG/load.gif" class="load" alt="Carregando...">
+    //         </form>
+    //         <div class="box"></div>
+    //     </div>
+    // </div>
+    // <!-- FIM MODAL -->
