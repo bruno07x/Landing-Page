@@ -9,20 +9,28 @@ MODIFIER = .block__element--modifier \ .block--modifier
 /* ############################################################
 ########################## BLOCK ##########################
 ############################################################ */
-.grid{
-    /* Criação de um grid padrão de 3 colunas que será usado no projeto todo */
+.entradaDobra1{
+     /* Criação de um grid padrão de 3 colunas que será usado no projeto todo */
     display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-gap: 20px;
-}
-.entradaDobra1{
     /* alinhando ao centro todo o conteudo da dobra1 */
     justify-items: center;
+    padding: 40px;
+}
+.especificacoesDobra2{
+    /* Criação de um grid padrão de 3 colunas que será usado no projeto todo */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    padding: 40px;
 }
 /* ############################################################
 ########################## ELEMENT ##########################
 ############################################################ */
+/* NOTE: Configurações de layout da dobra 1 */
 .entradaDobra1__logo{
     grid-column: 2;
     grid-row: 1;
@@ -38,6 +46,56 @@ MODIFIER = .block__element--modifier \ .block--modifier
 .entradaDobra1__contador{
     grid-column: 1;
     grid-row: 4;
+}
+
+/* NOTE: Configurações de layout da dobra 2 */
+.especificacoesDobra2__fraseMain{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row: 1;
+}
+/* NOTE: Criação dos ornamento de separação */
+.especificacoesDobra2__fraseMain::after{
+    content: "";
+    background: #FFBF6B;
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    width: 200px;
+    margin-top: 10px;
+}
+.especificacoesDobra2__funcionalidades{
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+}
+.especificacoesDobra2__observacoes{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 3;
+    /* FIXME: Verificar se há necessidade de configurar um width */
+    /* width: 600px; */
+}
+.especificacoesDobra2__exemploTenis{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.especificacoesDobra2__fraseSecundaria{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row: 4;
+}
+/* NOTE: Criação dos ornamento de separação */
+.especificacoesDobra2__fraseSecundaria::after{
+    content: "";
+    background: #FFBF6B;
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    width: 200px;
+    margin-top: 10px;
 }
 /* ############################################################
 ########################## MODIFIER ##########################

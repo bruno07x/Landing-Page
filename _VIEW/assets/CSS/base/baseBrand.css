@@ -1,4 +1,5 @@
 /*
+NOTE:
 This stylesheet is writen in BEM CSS
 BLOCK = .block 
 ELEMENT = .block__element
@@ -6,73 +7,148 @@ MODIFIER = .block__element--modifier \ .block--modifier
 */
 
 /* Fontes escolhidas para a marca, montserrat usada para causar destaque e imprima para textos em geral */
-@import url('https://fonts.googleapis.com/css?family=Imprima|Montserrat:400,700');
 
+@import url('https://fonts.googleapis.com/css?family=Imprima|Montserrat:400,700');
 /* ############################################################
 ########################## BLOCK ##########################
 ############################################################ */
+
+/* ########## utilidades ########## */
+
+.nulo {
+    display: none;
+}
+
+.alinhamento {
+    margin: 0 auto;
+}
 
 /* ############################################################
 ########################## ELEMENT ##########################
 ############################################################ */
 
 /* ########## tipografia ########## */
-.tipografia__titulo{
+
+.tipografia__titulo {
     font-size: 3.375em;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -5px;
 }
-.tipografia__subTitulo{
+
+.tipografia__subTitulo {
     font-size: 1.6em;
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
 }
-.tipografia__corpoTexto{
+
+.tipografia__corpoTexto {
     font-size: 1em;
     font-family: 'Imprima', sans-serif;
     font-weight: 400;
 }
-.tipografia__byline{
+
+.tipografia__byline {
     font-size: 0.618em;
     font-family: 'Imprima', sans-serif;
     font-weight: 400;
 }
 
 /* ########## cores ########## */
-.cores__base{
+
+.cores__base {
     color: #3B83B6;
 }
-.cores__enfase{
+
+.cores__enfase {
     color: #FFAF47;
 }
-.cores__suporteGray{
+
+.cores__suporteGray {
     color: #4D4D4D;
 }
-.cores__suporteWhite{
+
+.cores__suporteWhite {
     color: #EFEFEF;
 }
+
+/* ########## utilidades ########## */
+
+.alinhamento__titulos {
+    text-align: center;
+    /* white-space: nowrap; */
+}
+
 /* ############################################################
 ########################## MODIFIER ##########################
 ############################################################ */
 
 /* ########## tipografia ########## */
-.tipografia__subTitulo--segunda{
-    font-size: 1.618em;
+
+.tipografia__subTitulo--segunda {
+    font-size: 1.3em;
     font-weight: 400;
     font-family: 'Imprima', sans-serif;
 }
 
 /* ########## cores ########## */
-.cores__base--claro{
+
+.cores__base--claro {
     color: #5C9CCA;
 }
-.cores__base--escuro{
+
+.cores__base--escuro {
     color: #1E6DA5;
 }
-.cores__enfase--claro{
+
+.cores__enfase--claro {
     color: #FFBF6B;
 }
-.cores__enfase--escuro{
+
+.cores__enfase--escuro {
     color: #FF9E20;
 }
+
+/* ########## utilidades ########## */
+/*NOTE Configurações de sombras para efeitos de sobreposição */
+.shadow__element--1dp {
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+}
+
+.shadow__element--2dp {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 4px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.20);
+}
+
+.shadow__element--3dp {
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 3px 4px 0 rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.20);
+}
+
+.shadow__element--4dp {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14), 0 4px 5px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.20);
+}
+
+.shadow__element--6dp {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px 0 rgba(0, 0, 0, 0.20);
+}
+
+.shadow__element--8dp {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 3px rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.20);
+}
+
+.shadow__element--9dp {
+    box-shadow: 0 9px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 16px 2px rgba(0, 0, 0, 0.12), 0 5px 6px 0 rgba(0, 0, 0, 0.20);
+}
+
+.shadow__element--12dp {
+    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px 0 rgba(0, 0, 0, 0.20);
+}
+
+.shadow__element--16dp {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px 0 rgba(0, 0, 0, 0.20);
+}
+
+.shadow__element--24dp {
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px 0 rgba(0, 0, 0, 0.20);
+}
+
+/* TODO: Criar margins e paddings */

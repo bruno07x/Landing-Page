@@ -5,57 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Arquivo de base normalize css -->
+    <!--NOTE: Arquivo de base normalize css -->
     <link rel="stylesheet" href="_VIEW/assets/CSS/base/normalize.css">
-    <!-- Arquivo de base com cores da marca, tipografica usada, e utilidades -->
+    <!--NOTE: Arquivo de base com cores da marca, tipografica usada, e utilidades -->
     <link rel="stylesheet" href="_VIEW/assets/CSS/base/baseBrand.css">
-    <!-- Arquivo de layout contendo todo o grid do projeto -->
+    <!--NOTE: Arquivo de layout contendo todo o grid do projeto -->
     <link rel="stylesheet" href="_VIEW/assets/CSS/layout/grid.css">
-    <!-- Arquivo de layout contendo todo o grid do projeto -->
+    <!--NOTE: Arquivo de componentes contendo todo os componentes do projeto (botões, modal, backgrounds, etc) -->
     <link rel="stylesheet" href="_VIEW/assets/CSS/components/componentes.css">
-
     <title>Nike HyperAdapt</title>
 </head>
+<!-- TODO: Criar sombra no ícone do projeto -->
+<!-- TODO: Adicionar um favicon -->
 
 <body>
-    <!-- <h1>Nike HyperAdapt</h1> -->
-    <section class="background__dobra1">
-        <div class="grid entradaDobra1">
+    <!--NOTE: H1 com finalidade de ficar oculta para dar mais semântica ao projeto. -->
+    <h1 class="nulo">Nike HyperAdapt</h1>
+    <section class="background__dobra1 shadow__element--1dp">
+        <div class="entradaDobra1">
             <div class="entradaDobra1__logo">
                 <img src="_VIEW/assets/IMG/pattern/nike__icon-light.png">
             </div>
             <div class="entradaDobra1__frase">
                 <h1 class="tipografia__titulo cores__suporteWhite">Just do it!</h1>
             </div>
-            <div class="entradaDobra1__botao">
-                <a class="tipografia__subTitulo cores__suporteGray button">Reserve</a>
+            <div class="entradaDobra1__botao shadow__element--8dp button">
+                <a class="tipografia__subTitulo cores__suporteGray ">Reserve</a>
             </div>
-            <div class="entradaDobra1__contador contador tipografia__subTitulo--segunda">20H 30m 15s</div>
+            <div class="entradaDobra1__contador contador tipografia__subTitulo--segunda shadow__element--8dp cores__suporteGray">20H 30m 15s</div>
         </div>
     </section>
-    <!-- <section class="bg-secao2 anime">
-        <div class="grid secao2">
-            <div class="A-frase1-secao2 text-center">
-                <h1 class="slogan">Eis aqui uma nova concepção de calçado!</h1>
+
+    <section class="background__dobra2">
+        <div class="especificacoesDobra2">
+            <div class="especificacoesDobra2__fraseMain">
+                <h1 class="tipografia__subTitulo alinhamento__titulos cores__suporteGray">Eis aqui uma nova concepção de calçado!</h1>
             </div>
-            <div class="A-beneficios">
-                <p class="beneficio bhead azul-strong">
-                    Se ajusta automaticamente aos pés, com um controle de iluminação RGB e contador de passos e calorias. Tudo o que você precisa
-                    para ser uma pessoa de sucesso.
-                </p>
-                <p class="m-t-1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat imperdiet feugiat. Nunc mi nisl.Lorem ipsum dolor
-                    sit amet, consectetur adipiscing elit. Cras placerat imperdiet feugiat. Nunc mi nisl.
-                </p>
+            <ul class="especificacoesDobra2__funcionalidades margin__elemento--1">
+                <li class="tipografia__corpoTexto cores__suporteGray">Se ajusta automaticamente aos pés
+                    <img src="_VIEW/assets/IMG/section2/especDobra2__ajuste-baseDark.png" alt="">
+                </li>
+                <li class="tipografia__corpoTexto cores__suporteGray">Controle de iluminação RGB
+                    <img src="_VIEW/assets/IMG/section2/especDobra2__color-baseDark.png" alt="">
+                </li>
+                <li class="tipografia__corpoTexto cores__suporteGray">Contador de passos e calorias
+                    <img src="_VIEW/assets/IMG/section2/especDobra2__contagem-baseDark.png" alt="">
+                </li>
+                <li class="tipografia__corpoTexto cores__suporteGray">E mais opções no app de smartphone
+                    <img src="_VIEW/assets/IMG/section2/especDobra2__smartphone-baseDark.png"
+                        alt="">
+                </li>
+            </ul>
+            <div class="especificacoesDobra2__observacoes">
+                <p class="cores__suporteGray tipografia__corpoTexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat imperdiet feugiat. Nunc mi nisl.Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat imperdiet feugiat. Nunc mi nisl.</p>
             </div>
-            <div class="A-img-secao2">
-                <img class="img-secao2 opacity" src="IMG/tenis.png" alt="tênis nike">
+            <div class="especificacoesDobra2__exemploTenis">
+                <img class="" src="_VIEW/assets/IMG/section2/especDobra2__exemploTenis.png" alt="[Tênis Nike]" title ="Tênis Nike com funcionalidades">
             </div>
-            <div class="A-frase2-secao2 text-center">
-                <h3 class="slogan">Tecnologia e conforto na sola dos pés</h3>
+            <div class="especificacoesDobra2__fraseSecundaria">
+                <h3 class="tipografia__subTitulo alinhamento__titulos cores__suporteGray">Tecnologia e conforto na sola dos pés</h3>
             </div>
         </div>
-    </section> -->
+    </section>
+
     <!-- <section class="anime">
         <div class="grid-full secao3">
             <div class="A-img-secao3">
