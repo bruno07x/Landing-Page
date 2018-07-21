@@ -22,6 +22,7 @@
     <!--NOTE: H1 com finalidade de ficar oculta para dar mais semântica ao projeto. -->
     <h1 class="nulo">Nike HyperAdapt</h1>
     <section class="background__dobra1 shadow__element--1dp">
+        <!-- NOTE: Configuração de layout usando CSS grid da dobra1 do projeto -->
         <div class="entradaDobra1">
             <div class="entradaDobra1__logo">
                 <img src="_VIEW/assets/IMG/pattern/nike__icon-light.png">
@@ -36,12 +37,14 @@
         </div>
     </section>
 
-    <section class="background__dobra2">
+    <section class="">
+        <!-- NOTE: Configuração de layout usando CSS grid da dobra2 do projeto -->
         <div class="especificacoesDobra2">
             <div class="especificacoesDobra2__fraseMain">
-                <h1 class="tipografia__subTitulo alinhamento__titulos cores__suporteGray">Eis aqui uma nova concepção de calçado!</h1>
+                <h1 class="tipografia__titulo alinhamento__titulos cores__suporteGray">Eis aqui uma nova concepção de calçado!</h1>
             </div>
             <ul class="especificacoesDobra2__funcionalidades margin__elemento--1">
+                <!-- TODO: Adição de títulos e Alt para acessibilidade -->
                 <li class="tipografia__corpoTexto cores__suporteGray">Se ajusta automaticamente aos pés
                     <img src="_VIEW/assets/IMG/section2/especDobra2__ajuste-baseDark.png" alt="">
                 </li>
@@ -60,28 +63,28 @@
                 <p class="cores__suporteGray tipografia__corpoTexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat imperdiet feugiat. Nunc mi nisl.Lorem
                     ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat imperdiet feugiat. Nunc mi nisl.</p>
             </div>
-            <div class="especificacoesDobra2__exemploTenis">
-                <img class="" src="_VIEW/assets/IMG/section2/especDobra2__exemploTenis.png" alt="[Tênis Nike]" title ="Tênis Nike com funcionalidades">
+            <div class="especificacoesDobra2__exemploTenis alinhamento__elementos">
+                <img src="_VIEW/assets/IMG/section2/especDobra2__exemploTenis.png" alt="[Tênis Nike]" title ="Tênis Nike com funcionalidades">
             </div>
             <div class="especificacoesDobra2__fraseSecundaria">
-                <h3 class="tipografia__subTitulo alinhamento__titulos cores__suporteGray">Tecnologia e conforto na sola dos pés</h3>
+                <h3 class="tipografia__titulo alinhamento__titulos cores__suporteGray">Tecnologia e conforto na sola dos pés</h3>
             </div>
         </div>
     </section>
 
-    <!-- <section class="anime">
-        <div class="grid-full secao3">
-            <div class="A-img-secao3">
-                <img class="opacity" src="IMG/bg2_min.png" alt="Calçado nike">
+    <section class="background__corBase">
+        <div class="callDobra3">
+            <div class="callDobra3__destaqueImagem">
+                <img class="" src="_VIEW/assets/IMG/section3/callDobra3__destaqueImagem.png" alt="Calçado nike">
             </div>
-            <div class="A-frase-secao3">
-                <h1 class="slogan white text-center">Faça parte desta evolução!</h1>
+            <div class="callDobra3__frase">
+                <h1 class="tipografia__titulo cores__suporteGray">Faça parte desta evolução!</h1>
             </div>
-            <div class="A-btn-secao3">
-                <a class="btn btn-modal">Reserve</a>
+            <div class="callDobra3__botao button">
+                <a class="tipografia__subTitulo cores__suporteGray">Reserve</a>
             </div>
         </div>
-    </section> -->
+    </section>
     <!-- <section class="bg-secao4 anime">
         <div class="grid-full secao4">
             <div class="A-frase-secao4">

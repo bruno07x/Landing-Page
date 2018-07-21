@@ -1,0 +1,145 @@
+/*
+This stylesheet is writen in BEM CSS
+BLOCK = .block 
+ELEMENT = .block__element
+MODIFIER = .block__element--modifier \ .block--modifier
+*/
+// ############################################################
+// ########################## VARIAVEIS ##########################
+// ############################################################
+
+// ############################################################
+// ########################## MIXINS ##########################
+// ############################################################
+@mixin grid ($coluna: 3, $alinhamento: center) {
+    /* Criação de um grid padrão de 3 colunas que será usado no projeto todo */
+    display: grid;
+    grid-template-columns: repeat($coluna, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    /* alinhando ao centro todo o conteudo da dobra1 */
+    justify-items: $alinhamento;
+}
+/* ############################################################
+########################## BLOCK ##########################
+############################################################ */
+.entradaDobra1{
+    @include grid();
+}
+.especificacoesDobra2{
+    @include grid(3 , normal);
+}
+
+.callDobra3{
+    @include grid(2, normal);
+}
+/* ############################################################
+########################## ELEMENT ##########################
+############################################################ */
+/* NOTE: ########## Configurações de layout da dobra 1 ##########*/
+.entradaDobra1__logo{
+    grid-column: 2;
+    grid-row: 1;
+}
+.entradaDobra1__frase{
+    grid-column: 2;
+    grid-row: 2;
+}
+.entradaDobra1__botao{
+    grid-column: 2;
+    grid-row: 3;
+}
+.entradaDobra1__contador{
+    grid-column: 1;
+    grid-row: 4;
+}
+
+/* NOTE: ########## Configurações de layout da dobra 2 ##########*/
+.especificacoesDobra2__fraseMain{
+    /* NOTE: Ocupa linha 1 inteira */
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row: 1;
+}
+/* NOTE: Criação dos ornamento de separação */
+.especificacoesDobra2__fraseMain::after{
+    content: "";
+    background: #FFBF6B;
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    width: 200px;
+    margin-top: 10px;
+}
+.especificacoesDobra2__funcionalidades{
+    grid-column: 1;
+    grid-row: 2;
+    /* NOTE: Alinhamento do conteúdo ao centro deste elemento */
+    justify-items: start;
+    align-self: center;
+}
+.especificacoesDobra2__observacoes{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 3;
+    /* FIXME: Verificar se há necessidade de configurar um width */
+    width: 80%;
+}
+.especificacoesDobra2__exemploTenis{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.especificacoesDobra2__fraseSecundaria{
+    /* NOTE: Ocupa linha 4 inteira */
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row: 4;
+}
+/* NOTE: Criação dos ornamento de separação */
+.especificacoesDobra2__fraseSecundaria::after{
+    content: "";
+    background: #FFBF6B;
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+/* NOTE: ########## Configurações de layout da dobra 3 ##########*/
+.callDobra3__destaqueImagem{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2; 
+}
+.callDobra3__frase{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3; 
+    // NOTE: Alinhamento para centralização do texto no meio
+    text-align: center;
+
+    &::after{
+        content: "";
+        background: #FFBF6B;
+        display: block;
+        margin: 0 auto;
+        height: 3px;
+        width: 200px;
+        margin-top: 10px;
+    }
+}
+.callDobra3__botao{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3; 
+    justify-self: center;
+}
+/* ############################################################
+########################## MODIFIER ##########################
+############################################################ */
