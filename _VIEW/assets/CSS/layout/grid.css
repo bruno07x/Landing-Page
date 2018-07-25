@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* Fontes escolhidas para a marca, montserrat usada para causar destaque e imprima para textos em geral */
+@import url("https://fonts.googleapis.com/css?family=Imprima|Montserrat:400,700");
 /*
 This stylesheet is writen in BEM CSS
 BLOCK = .block 
@@ -34,6 +36,15 @@ MODIFIER = .block__element--modifier \ .block--modifier
   grid-gap: 20px;
   /* alinhando ao centro todo o conteudo da dobra1 */
   justify-items: normal; }
+
+.perguntasDobra4 {
+  /* Cria├º├úo de um grid padr├úo de 3 colunas que ser├í usado no projeto todo */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  /* alinhando ao centro todo o conteudo da dobra1 */
+  justify-items: center; }
 
 /* ############################################################
 ########################## ELEMENT ##########################
@@ -136,6 +147,43 @@ MODIFIER = .block__element--modifier \ .block--modifier
   grid-column-start: 2;
   grid-column-end: 3;
   justify-self: center; }
+
+/* NOTE: ########## Configura├º├Áes de layout da dobra 4 ##########*/
+.perguntasDobra4_frase {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2; }
+  .perguntasDobra4_frase::after {
+    content: "";
+    background: #FFBF6B;
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    width: 200px;
+    margin-top: 10px; }
+
+.perguntasDobra4_pergunta1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4; }
+  .perguntasDobra4_pergunta1:nth-child(even) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5; }
+
+.perguntasDobra4_pergunta2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4; }
+  .perguntasDobra4_pergunta2:nth-child(even) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5; }
 
 /* ############################################################
 ########################## MODIFIER ##########################

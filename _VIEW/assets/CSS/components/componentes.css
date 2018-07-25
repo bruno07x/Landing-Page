@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* Fontes escolhidas para a marca, montserrat usada para causar destaque e imprima para textos em geral */
+@import url("https://fonts.googleapis.com/css?family=Imprima|Montserrat:400,700");
 /*
 This stylesheet is writen in BEM CSS
 BLOCK = .block 
@@ -36,7 +38,7 @@ MODIFIER = .block__element--modifier \ .block--modifier
 ############################################################ */
 /* Configura├º├Áes de background do projeto */
 .background__dobra1 {
-  background: url(../../IMG/section1/backgroundSection1.jpg);
+  background: url(../IMG/section1/backgroundSection1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -45,6 +47,10 @@ MODIFIER = .block__element--modifier \ .block--modifier
 
 .background__corBase {
   background: linear-gradient(to bottom right, #3B83B6, #1E6DA5); }
+
+.perguntasDobra4__backgroundPrimario {
+  height: 50px;
+  background: linear-gradient(to bottom right, #5C9CCA, #3B83B6); }
 
 /* ############################################################
 ########################## MODIFIER ##########################

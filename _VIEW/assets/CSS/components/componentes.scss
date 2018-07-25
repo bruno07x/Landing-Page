@@ -1,3 +1,4 @@
+@import '../abstract/abstract';
 /*
 This stylesheet is writen in BEM CSS
 BLOCK = .block 
@@ -38,7 +39,7 @@ MODIFIER = .block__element--modifier \ .block--modifier
 
 /* Configurações de background do projeto */
 .background__dobra1{
-    background: url(../../IMG/section1/backgroundSection1.jpg);
+    background: url(../IMG/section1/backgroundSection1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -46,7 +47,35 @@ MODIFIER = .block__element--modifier \ .block--modifier
     height: 400px;
 }
 .background__corBase{
-    background: linear-gradient(to bottom right, #3B83B6, #1E6DA5);
+    background: linear-gradient(to bottom right, $corBase, $corBase--escura);
+}
+
+// FIXME: Corrigir esses 2 blocos 
+.perguntasDobra4__backgroundPrimario{
+    height: 100%;
+    width: 80%;
+    background: linear-gradient(to bottom right, $corBase, $corBase--escura );
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: block;
+    box-sizing: border-box;
+    margin: 0 auto;
+    cursor: pointer;
+    @include subTitulo--segunda;
+    color: $corSuporte2;
+}
+.perguntasDobra4__backgroundSecudaria{
+    height: 100%;
+    width: 80%;
+    background: linear-gradient(to bottom right, $corBase--clara, $corBase);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    display: block;
+    box-sizing: border-box;
+    margin: 0 auto;
+    @include corpoTexto;
+    color: $corSuporte2;
 }
 /* ############################################################
 ########################## MODIFIER ##########################

@@ -5,14 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--NOTE: Arquivo de base normalize css -->
-    <link rel="stylesheet" href="_VIEW/assets/CSS/base/normalize.css">
-    <!--NOTE: Arquivo de base com cores da marca, tipografica usada, e utilidades -->
-    <link rel="stylesheet" href="_VIEW/assets/CSS/base/baseBrand.css">
-    <!--NOTE: Arquivo de layout contendo todo o grid do projeto -->
-    <link rel="stylesheet" href="_VIEW/assets/CSS/layout/grid.css">
-    <!--NOTE: Arquivo de componentes contendo todo os componentes do projeto (botões, modal, backgrounds, etc) -->
-    <link rel="stylesheet" href="_VIEW/assets/CSS/components/componentes.css">
+    <!-- NOTE:  Arquivos CSS-->
+    <link rel="stylesheet" href="_VIEW/assets/CSS/main.css">
     <title>Nike HyperAdapt</title>
 </head>
 <!-- TODO: Criar sombra no ícone do projeto -->
@@ -78,50 +72,40 @@
                 <img class="" src="_VIEW/assets/IMG/section3/callDobra3__destaqueImagem.png" alt="Calçado nike">
             </div>
             <div class="callDobra3__frase">
-                <h1 class="tipografia__titulo cores__suporteGray">Faça parte desta evolução!</h1>
+                <h1 class="tipografia__titulo cores__suporteWhite">Faça parte desta evolução!</h1>
             </div>
             <div class="callDobra3__botao button">
                 <a class="tipografia__subTitulo cores__suporteGray">Reserve</a>
             </div>
         </div>
     </section>
-    <!-- <section class="bg-secao4 anime">
-        <div class="grid-full secao4">
-            <div class="A-frase-secao4">
-                <p class="slogan text-center">Perguntas frequentes:</p>
+    <section>
+        <div class="perguntasDobra4">
+            <div class="perguntasDobra4_frase">
+                <p class="tipografia__titulo cores__suporteGray">Perguntas frequentes:</p>
             </div>
-            <ul class="ul-secao4 m-b-1">
-                <li class="white m-x-1">
-                    <p class="h2-sanfona-secao4 bhead">→ O que acompanha o produto?</p>
-                    <div class="sanfona">
-                        <p class="cinza">O produto vem acompanhado com 2 pares de carregadores com plug magnético, um manual de inicio rápido
-                            com QR code para baixar o app</p>
-                    </div>
-                </li>
-                <li class="white m-x-1">
-                    <p class="h2-sanfona-secao4 bhead">→ Como controlo a iluminação do calçado?</p>
-                    <div class="sanfona">
-                        <p class="cinza">Através do app você consegue configurar a cor com o código hexadecimal ou simplesmente arrastando
-                            para o lado da cor favorita.</p>
-                    </div>
-                </li>
-                <li class="white m-x-1">
-                    <p class="h2-sanfona-secao4 bhead">→ Por outro lado, a competitividade nas transações?</p>
-                    <div class="sanfona">
-                        <p class="cinza">Gostaria de enfatizar que o consenso sobre a necessidade de qualificação agrega Gostaria de enfatizar
-                            que o consenso sobre a necessidade de qualificação agrega .</p>
-                    </div>
-                </li>
-                <li class="white m-x-1">
-                    <p class="h2-sanfona-secao4 bhead">→ Valor ao estabelecimento dos métodos?</p>
-                    <div class="sanfona">
-                        <p class="cinza">Gostaria de enfatizar que o consenso sobre a necessidade de qualificação agrega Gostaria de enfatizar
-                            que o consenso sobre a necessidade de qualificação agrega .</p>
-                    </div>
-                </li>
-            </ul>
+            <div class="perguntasDobra4_pergunta1">
+                <p class="perguntasDobra4__backgroundPrimario">→ O que acompanha o produto?</p>
+                    <p class="perguntasDobra4__backgroundSecudaria">O produto vem acompanhado com 2 pares de carregadores com plug magnético, um manual de inicio rápido
+                        com QR code para baixar o app</p>
+            </div>
+            <div class="perguntasDobra4_pergunta1">
+                <p class="perguntasDobra4__backgroundPrimario">→ Como controlo a iluminação do calçado?</p>
+                    <p class="perguntasDobra4__backgroundSecudaria">Através do app você consegue configurar a cor com o código hexadecimal ou simplesmente arrastando
+                        para o lado da cor favorita.</p>
+            </div>
+            <div class="perguntasDobra4_pergunta2">
+                <p class="perguntasDobra4__backgroundPrimario">→ Por outro lado, a competitividade nas transações?</p>
+                    <p class="perguntasDobra4__backgroundSecudaria">Gostaria de enfatizar que o consenso sobre a necessidade de qualificação agrega Gostaria de enfatizar
+                        que o consenso sobre a necessidade de qualificação agrega .</p>
+            </div>
+            <div class="perguntasDobra4_pergunta2">
+                <p class="perguntasDobra4__backgroundPrimario">→ Valor ao estabelecimento dos métodos?</p>
+                    <p class="perguntasDobra4__backgroundSecudaria">Gostaria de enfatizar que o consenso sobre a necessidade de qualificação agrega Gostaria de enfatizar
+                        que o consenso sobre a necessidade de qualificação agrega .</p>
+            </div>
         </div>
-    </section> -->
+    </section>
     <!-- <section>
         <div class="grid-full footer">
             <div class="A-logo-secao5 m-y-0">

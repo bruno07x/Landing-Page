@@ -1,0 +1,451 @@
+@charset "UTF-8";
+/*NOTE: Arquivo de base normalize css*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Imprima|Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Imprima|Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Imprima|Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Imprima|Montserrat:400,700");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* NOTE: Arquivos de variaveis do sistema*/
+/* Fontes escolhidas para a marca, montserrat usada para causar destaque e imprima para textos em geral */
+/*NOTE: Arquivo de base com cores da marca, tipografica usada, e utilidades*/
+/* Fontes escolhidas para a marca, montserrat usada para causar destaque e imprima para textos em geral */
+/*
+NOTE:
+This stylesheet is writen in BEM CSS
+BLOCK = .block 
+ELEMENT = .block__element
+MODIFIER = .block__element--modifier \ .block--modifier
+*/
+/* ############################################################
+########################## BLOCK ##########################
+############################################################ */
+/* ########## utilidades ########## */
+.nulo {
+  display: none; }
+
+.alinhamento {
+  margin: 0 auto; }
+
+/* ############################################################
+########################## ELEMENT ##########################
+############################################################ */
+/* ########## tipografia ########## */
+.tipografia__titulo {
+  font-size: 3.375em;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -5px; }
+
+.tipografia__subTitulo {
+  font-size: 1.6em;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif; }
+
+.tipografia__corpoTexto {
+  font-size: 1em;
+  font-family: 'Imprima', sans-serif;
+  font-weight: 400; }
+
+.tipografia__byline {
+  font-size: 0.618em;
+  font-family: 'Imprima', sans-serif;
+  font-weight: 400; }
+
+/* ########## cores ########## */
+.cores__base {
+  color: #3B83B6; }
+
+.cores__enfase {
+  color: #FFAF47; }
+
+.cores__suporteGray {
+  color: #4D4D4D; }
+
+.cores__suporteWhite {
+  color: #EFEFEF; }
+
+/* ########## utilidades ########## */
+.alinhamento__titulos {
+  text-align: center;
+  /* white-space: nowrap; */ }
+
+.alinhamento__elementos {
+  justify-self: center; }
+
+/* ############################################################
+########################## MODIFIER ##########################
+############################################################ */
+/* ########## tipografia ########## */
+.tipografia__subTitulo--segunda {
+  font-size: 1.3em;
+  font-weight: 400;
+  font-family: 'Imprima', sans-serif; }
+
+/* ########## cores ########## */
+.cores__base--claro {
+  color: #5C9CCA; }
+
+.cores__base--escuro {
+  color: #1E6DA5; }
+
+.cores__enfase--claro {
+  color: #FFBF6B; }
+
+.cores__enfase--escuro {
+  color: #FF9E20; }
+
+/* ########## utilidades ########## */
+/*NOTE Configura├º├Áes de sombras para efeitos de sobreposi├º├úo */
+.shadow__element--1dp {
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2); }
+
+.shadow__element--2dp {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 4px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
+
+.shadow__element--3dp {
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 3px 4px 0 rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2); }
+
+.shadow__element--4dp {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14), 0 4px 5px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.2); }
+
+.shadow__element--6dp {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
+
+.shadow__element--8dp {
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 3px rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.2); }
+
+.shadow__element--9dp {
+  box-shadow: 0 9px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 16px 2px rgba(0, 0, 0, 0.12), 0 5px 6px 0 rgba(0, 0, 0, 0.2); }
+
+.shadow__element--12dp {
+  box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px 0 rgba(0, 0, 0, 0.2); }
+
+.shadow__element--16dp {
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px 0 rgba(0, 0, 0, 0.2); }
+
+.shadow__element--24dp {
+  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px 0 rgba(0, 0, 0, 0.2); }
+
+/* TODO: Criar margins e paddings */
+/*NOTE: Arquivo de layout contendo todo o grid do projeto*/
+/* Fontes escolhidas para a marca, montserrat usada para causar destaque e imprima para textos em geral */
+/*
+This stylesheet is writen in BEM CSS
+BLOCK = .block 
+ELEMENT = .block__element
+MODIFIER = .block__element--modifier \ .block--modifier
+*/
+/* ############################################################
+########################## BLOCK ##########################
+############################################################ */
+.entradaDobra1 {
+  /* Cria├º├úo de um grid padr├úo de 3 colunas que ser├í usado no projeto todo */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  /* alinhando ao centro todo o conteudo da dobra1 */
+  justify-items: center; }
+
+.especificacoesDobra2 {
+  /* Cria├º├úo de um grid padr├úo de 3 colunas que ser├í usado no projeto todo */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  /* alinhando ao centro todo o conteudo da dobra1 */
+  justify-items: normal; }
+
+.callDobra3 {
+  /* Cria├º├úo de um grid padr├úo de 3 colunas que ser├í usado no projeto todo */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  /* alinhando ao centro todo o conteudo da dobra1 */
+  justify-items: normal; }
+
+.perguntasDobra4 {
+  /* Cria├º├úo de um grid padr├úo de 3 colunas que ser├í usado no projeto todo */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  /* alinhando ao centro todo o conteudo da dobra1 */
+  justify-items: center; }
+
+/* ############################################################
+########################## ELEMENT ##########################
+############################################################ */
+/* NOTE: ########## Configura├º├Áes de layout da dobra 1 ##########*/
+.entradaDobra1__logo {
+  grid-column: 2;
+  grid-row: 1; }
+
+.entradaDobra1__frase {
+  grid-column: 2;
+  grid-row: 2; }
+
+.entradaDobra1__botao {
+  grid-column: 2;
+  grid-row: 3; }
+
+.entradaDobra1__contador {
+  grid-column: 1;
+  grid-row: 4; }
+
+/* NOTE: ########## Configura├º├Áes de layout da dobra 2 ##########*/
+.especificacoesDobra2__fraseMain {
+  /* NOTE: Ocupa linha 1 inteira */
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row: 1; }
+
+/* NOTE: Cria├º├úo dos ornamento de separa├º├úo */
+.especificacoesDobra2__fraseMain::after {
+  content: "";
+  background: #FFBF6B;
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  width: 200px;
+  margin-top: 10px; }
+
+.especificacoesDobra2__funcionalidades {
+  grid-column: 1;
+  grid-row: 2;
+  /* NOTE: Alinhamento do conte├║do ao centro deste elemento */
+  justify-items: start;
+  align-self: center; }
+
+.especificacoesDobra2__observacoes {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 3;
+  /* FIXME: Verificar se h├í necessidade de configurar um width */
+  width: 80%; }
+
+.especificacoesDobra2__exemploTenis {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4; }
+
+.especificacoesDobra2__fraseSecundaria {
+  /* NOTE: Ocupa linha 4 inteira */
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row: 4; }
+
+/* NOTE: Cria├º├úo dos ornamento de separa├º├úo */
+.especificacoesDobra2__fraseSecundaria::after {
+  content: "";
+  background: #FFBF6B;
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  width: 200px;
+  margin-top: 10px; }
+
+/* NOTE: ########## Configura├º├Áes de layout da dobra 3 ##########*/
+.callDobra3__destaqueImagem {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2; }
+
+.callDobra3__frase {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  text-align: center; }
+  .callDobra3__frase::after {
+    content: "";
+    background: #FFBF6B;
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    width: 200px;
+    margin-top: 10px; }
+
+.callDobra3__botao {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  justify-self: center; }
+
+/* NOTE: ########## Configura├º├Áes de layout da dobra 4 ##########*/
+.perguntasDobra4_frase {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2; }
+  .perguntasDobra4_frase::after {
+    content: "";
+    background: #FFBF6B;
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    width: 200px;
+    margin-top: 10px; }
+
+.perguntasDobra4_pergunta1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4; }
+  .perguntasDobra4_pergunta1:nth-child(even) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5; }
+
+.perguntasDobra4_pergunta2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4; }
+  .perguntasDobra4_pergunta2:nth-child(even) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5; }
+
+/* ############################################################
+########################## MODIFIER ##########################
+############################################################ */
+/*NOTE: Arquivo de componentes contendo todo os componentes do projeto (bot├Áes, modal, backgrounds, etc)*/
+/* Fontes escolhidas para a marca, montserrat usada para causar destaque e imprima para textos em geral */
+/*
+This stylesheet is writen in BEM CSS
+BLOCK = .block 
+ELEMENT = .block__element
+MODIFIER = .block__element--modifier \ .block--modifier
+*/
+/* ############################################################
+########################## BLOCK ##########################
+############################################################ */
+.button {
+  background: linear-gradient(to bottom right, #FFBF6B, #FFAF47);
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  /*NOTE: Cria borda na parte inferior afim de criar efeito de sombreamento */
+  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+  width: 120px;
+  height: 30px;
+  text-align: center; }
+
+.contador {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: #FFF;
+  width: 280px;
+  text-align: center;
+  /* NOTE: Margin top para que o elemento fico entre a dobra1 e 2 */
+  /* FIXME: Verificar se esta margin ir├í ser aplicada no maior n├║mero de dispositivos */
+  margin-top: 120px; }
+
+/* ############################################################
+########################## ELEMENT ##########################
+############################################################ */
+/* Configura├º├Áes de background do projeto */
+.background__dobra1 {
+  background: url(../IMG/section1/backgroundSection1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* altura para ser melhor para visualizar o background */
+  height: 400px; }
+
+.background__corBase {
+  background: linear-gradient(to bottom right, #3B83B6, #1E6DA5); }
+
+.perguntasDobra4__backgroundPrimario {
+  height: 100%;
+  width: 80%;
+  background: linear-gradient(to bottom right, #3B83B6, #1E6DA5);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  cursor: pointer;
+  font-size: 1.3em;
+  font-weight: 400;
+  font-family: 'Imprima', sans-serif;
+  color: #EFEFEF; }
+
+.perguntasDobra4__backgroundSecudaria {
+  height: 100%;
+  width: 80%;
+  background: linear-gradient(to bottom right, #5C9CCA, #3B83B6);
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-size: 1em;
+  font-family: 'Imprima', sans-serif;
+  font-weight: 400;
+  color: #EFEFEF; }
+
+/* ############################################################
+########################## MODIFIER ##########################
+############################################################ */
+.button:hover {
+  background: linear-gradient(to bottom right, #FFAF47, #FF9E20);
+  box-shadow: none; }
+
+/*# sourceMappingURL=main.css.map */

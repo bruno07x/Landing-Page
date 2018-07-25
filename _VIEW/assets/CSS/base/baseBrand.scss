@@ -1,3 +1,4 @@
+@import '../abstract/abstract';
 /*
 NOTE:
 This stylesheet is writen in BEM CSS
@@ -6,50 +7,6 @@ ELEMENT = .block__element
 MODIFIER = .block__element--modifier \ .block--modifier
 */
 
-/* Fontes escolhidas para a marca, montserrat usada para causar destaque e imprima para textos em geral */
-// ############################################################
-// ########################## VARIAVEIS ##########################
-// ############################################################
-$corBase--clara: #5C9CCA;
-$corBase: #3B83B6;
-$corBase--escura: #1E6DA5;
-
-$corEnfase--clara: #FFBF6B;
-$corEnfase: #FFAF47;
-$corEnfase--escura: #FF9E20;
-
-$corSuporte1: #4D4D4D;
-$corSuporte2: #EFEFEF;
-// ############################################################
-// ########################## MIXINS ##########################
-// ############################################################
-@mixin titulo {
-    font-size: 3.375em;
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: -5px;
-}
-@mixin subTitulo {
-    font-size: 1.6em;
-    font-weight: 400;
-    font-family: 'Montserrat', sans-serif;
-}
-@mixin subTitulo--segunda {
-    font-size: 1.3em;
-    font-weight: 400;
-    font-family: 'Imprima', sans-serif;
-}
-@mixin corpoTexto {
-    font-size: 1em;
-    font-family: 'Imprima', sans-serif;
-    font-weight: 400;
-}
-@mixin byline {
-    font-size: 0.618em;
-    font-family: 'Imprima', sans-serif;
-    font-weight: 400;
-}
-@import url('https://fonts.googleapis.com/css?family=Imprima|Montserrat:400,700');
 /* ############################################################
 ########################## BLOCK ##########################
 ############################################################ */
