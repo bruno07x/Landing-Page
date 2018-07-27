@@ -15,7 +15,6 @@ MODIFIER = .block__element--modifier \ .block--modifier
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 3px;
-  /*NOTE: Cria borda na parte inferior afim de criar efeito de sombreamento */
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
   width: 120px;
   height: 30px;
@@ -29,20 +28,16 @@ MODIFIER = .block__element--modifier \ .block--modifier
   background-color: #FFF;
   width: 280px;
   text-align: center;
-  /* NOTE: Margin top para que o elemento fico entre a dobra1 e 2 */
-  /* FIXME: Verificar se esta margin ir├í ser aplicada no maior n├║mero de dispositivos */
   margin-top: 120px; }
 
 /* ############################################################
 ########################## ELEMENT ##########################
 ############################################################ */
-/* Configura├º├Áes de background do projeto */
 .background__dobra1 {
   background: url(../IMG/section1/backgroundSection1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* altura para ser melhor para visualizar o background */
   height: 400px; }
 
 .background__corBase {

@@ -15,10 +15,11 @@ MODIFIER = .block__element--modifier \ .block--modifier
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 3px;
-    /*NOTE: Cria borda na parte inferior afim de criar efeito de sombreamento */
+    // NOTE: Cria borda na parte inferior afim de criar efeito de sombreamento
     box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
-    width: 120px;
-    height: 30px;
+    width: 150px;
+    height: 45px;
+    box-sizing: border-box;
     text-align: center;
 }
 .contador{
@@ -29,14 +30,14 @@ MODIFIER = .block__element--modifier \ .block--modifier
     background-color: #FFF;
     width: 280px;
     text-align: center;
-    /* NOTE: Margin top para que o elemento fico entre a dobra1 e 2 */
-    /* FIXME: Verificar se esta margin irá ser aplicada no maior número de dispositivos */
-    margin-top: 120px;
+    // NOTE: Margin top para que o elemento fico entre a dobra1 e 2
+    // FIXME: Verificar se esta margin irá ser aplicada no maior número de dispositivos
+    margin-top: 70px;
 }
 /* ############################################################
 ########################## ELEMENT ##########################
 ############################################################ */
-
+// NOTE: ########## DOBRA 1 ##########
 /* Configurações de background do projeto */
 .background__dobra1{
     background: url(../IMG/section1/backgroundSection1.jpg);
@@ -50,7 +51,11 @@ MODIFIER = .block__element--modifier \ .block--modifier
     background: linear-gradient(to bottom right, $corBase, $corBase--escura);
 }
 
-// FIXME: Corrigir esses 2 blocos 
+// NOTE: ########## DOBRA 2 ##########
+
+// NOTE: ########## DOBRA 3 ##########
+
+// NOTE: ########## DOBRA 4 ##########
 .perguntasDobra4__backgroundPrimario{
     height: 100%;
     width: 80%;
@@ -61,8 +66,7 @@ MODIFIER = .block__element--modifier \ .block--modifier
     box-sizing: border-box;
     margin: 0 auto;
     cursor: pointer;
-    @include subTitulo--segunda;
-    color: $corSuporte2;
+    padding-left: 10px;
 }
 .perguntasDobra4__backgroundSecudaria{
     height: 100%;
@@ -74,9 +78,9 @@ MODIFIER = .block__element--modifier \ .block--modifier
     display: block;
     box-sizing: border-box;
     margin: 0 auto;
-    @include corpoTexto;
-    color: $corSuporte2;
 }
+
+// NOTE: ########## FOOTER ##########
 /* ############################################################
 ########################## MODIFIER ##########################
 ############################################################ */

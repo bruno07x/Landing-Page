@@ -13,6 +13,18 @@ $corEnfase--escura: #FF9E20;
 
 $corSuporte1: #4D4D4D;
 $corSuporte2: #EFEFEF;
+
+// NOTE: Variaveis para paddings e margins
+$espacamento1: 10px;
+$espacamento2: 20px;
+$espacamento3: 30px;
+$espacamento4: 40px;
+$espacamento5: 50px;
+$espacamento6: 60px;
+
+// NOTE: Variavel das medias query
+$mqmobile: "(min-width: 360px) and (max-width: 768px)";
+
 // ############################################################
 // ########################## MIXINS ##########################
 // ############################################################
@@ -22,12 +34,28 @@ $corSuporte2: #EFEFEF;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -5px;
 }
+@mixin titulo--mobile {
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -2px;
+}
 @mixin subTitulo {
     font-size: 1.6em;
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
 }
+@mixin subTitulo--mobile {
+    font-size: 1.3em;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
 @mixin subTitulo--segunda {
+    font-size: 1.3em;
+    font-weight: 400;
+    font-family: 'Imprima', sans-serif;
+}
+@mixin subTitulo--segunda--mobile {
     font-size: 1.3em;
     font-weight: 400;
     font-family: 'Imprima', sans-serif;
@@ -42,4 +70,16 @@ $corSuporte2: #EFEFEF;
     font-family: 'Imprima', sans-serif;
     font-weight: 400;
 }
+
+// NOTE: Grid system
+@mixin grid ($coluna: 3, $alinhamento: center) {
+    /* Criação de um grid padrão de 3 colunas que será usado no projeto todo */
+    display: grid;
+    grid-template-columns: repeat($coluna, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    /* alinhando ao centro todo o conteudo da dobra1 */
+    justify-items: $alinhamento;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Imprima|Montserrat:400,700');

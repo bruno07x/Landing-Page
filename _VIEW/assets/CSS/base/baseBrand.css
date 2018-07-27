@@ -87,7 +87,6 @@ MODIFIER = .block__element--modifier \ .block--modifier
   color: #FF9E20; }
 
 /* ########## utilidades ########## */
-/*NOTE Configura├º├Áes de sombras para efeitos de sobreposi├º├úo */
 .shadow__element--1dp {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2); }
 
@@ -117,7 +116,5 @@ MODIFIER = .block__element--modifier \ .block--modifier
 
 .shadow__element--24dp {
   box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px 0 rgba(0, 0, 0, 0.2); }
-
-/* TODO: Criar margins e paddings */
 
 /*# sourceMappingURL=baseBrand.css.map */

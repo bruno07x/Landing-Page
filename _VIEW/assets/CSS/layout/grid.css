@@ -49,7 +49,6 @@ MODIFIER = .block__element--modifier \ .block--modifier
 /* ############################################################
 ########################## ELEMENT ##########################
 ############################################################ */
-/* NOTE: ########## Configura├º├Áes de layout da dobra 1 ##########*/
 .entradaDobra1__logo {
   grid-column: 2;
   grid-row: 1; }
@@ -66,14 +65,11 @@ MODIFIER = .block__element--modifier \ .block--modifier
   grid-column: 1;
   grid-row: 4; }
 
-/* NOTE: ########## Configura├º├Áes de layout da dobra 2 ##########*/
 .especificacoesDobra2__fraseMain {
-  /* NOTE: Ocupa linha 1 inteira */
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row: 1; }
 
-/* NOTE: Cria├º├úo dos ornamento de separa├º├úo */
 .especificacoesDobra2__fraseMain::after {
   content: "";
   background: #FFBF6B;
@@ -86,7 +82,6 @@ MODIFIER = .block__element--modifier \ .block--modifier
 .especificacoesDobra2__funcionalidades {
   grid-column: 1;
   grid-row: 2;
-  /* NOTE: Alinhamento do conte├║do ao centro deste elemento */
   justify-items: start;
   align-self: center; }
 
@@ -94,7 +89,6 @@ MODIFIER = .block__element--modifier \ .block--modifier
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row: 3;
-  /* FIXME: Verificar se h├í necessidade de configurar um width */
   width: 80%; }
 
 .especificacoesDobra2__exemploTenis {
@@ -104,12 +98,10 @@ MODIFIER = .block__element--modifier \ .block--modifier
   grid-row-end: 4; }
 
 .especificacoesDobra2__fraseSecundaria {
-  /* NOTE: Ocupa linha 4 inteira */
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row: 4; }
 
-/* NOTE: Cria├º├úo dos ornamento de separa├º├úo */
 .especificacoesDobra2__fraseSecundaria::after {
   content: "";
   background: #FFBF6B;
@@ -119,7 +111,6 @@ MODIFIER = .block__element--modifier \ .block--modifier
   width: 200px;
   margin-top: 10px; }
 
-/* NOTE: ########## Configura├º├Áes de layout da dobra 3 ##########*/
 .callDobra3__destaqueImagem {
   grid-row-start: 1;
   grid-row-end: 3;
@@ -148,7 +139,6 @@ MODIFIER = .block__element--modifier \ .block--modifier
   grid-column-end: 3;
   justify-self: center; }
 
-/* NOTE: ########## Configura├º├Áes de layout da dobra 4 ##########*/
 .perguntasDobra4_frase {
   grid-column-start: 1;
   grid-column-end: 5;

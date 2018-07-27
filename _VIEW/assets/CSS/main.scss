@@ -1,10 +1,10 @@
-/*NOTE: Arquivo de base normalize css*/
+//NOTE:  Arquivo de base normalize css*/
 @import "base/normalize";
-/* NOTE: Arquivos de variaveis do sistema*/
+//NOTE:  Arquivos de variaveis do sistema*/
 @import 'abstract/abstract';
-/*NOTE: Arquivo de base com cores da marca, tipografica usada, e utilidades*/
+//NOTE:  Arquivo de base com cores da marca, tipografica usada, e utilidades*/
 @import "base/baseBrand";
-/*NOTE: Arquivo de layout contendo todo o grid do projeto*/
+//NOTE:  Arquivo de layout contendo todo o grid do projeto*/
 @import 'layout/grid';
-/*NOTE: Arquivo de componentes contendo todo os componentes do projeto (botões, modal, backgrounds, etc)*/
+//NOTE:  Arquivo de componentes contendo todo os componentes do projeto (botoes, modal, backgrounds, etc)*/
 @import 'components/componentes';
