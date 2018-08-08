@@ -1,3 +1,7 @@
+// NOTE: Criacao de sprites
+$sprite-spacing: 5px;
+@import '../IMG/sprite/*.png';
+
 //NOTE:  Arquivo de base normalize css*/
 @import "base/normalize";
 //NOTE:  Arquivos de variaveis do sistema*/

@@ -57,7 +57,6 @@ MODIFIER = .block__element--modifier \ .block--modifier
 
 // NOTE: ########## DOBRA 4 ##########
 .perguntasDobra4__backgroundPrimario{
-    height: 100%;
     width: 80%;
     background: linear-gradient(to bottom right, $corBase, $corBase--escura );
     padding-top: 20px;
@@ -69,7 +68,6 @@ MODIFIER = .block__element--modifier \ .block--modifier
     padding-left: 10px;
 }
 .perguntasDobra4__backgroundSecudaria{
-    height: 100%;
     width: 80%;
     background: linear-gradient(to bottom right, $corBase--clara, $corBase);
     padding-top: 20px;
@@ -79,8 +77,16 @@ MODIFIER = .block__element--modifier \ .block--modifier
     box-sizing: border-box;
     margin: 0 auto;
 }
-
 // NOTE: ########## FOOTER ##########
+// NOTE: Configuracao dos icones de redes sociais do footer
+@include all-sprite-sprites;
+.sprite__facebook{
+    height: 50px;
+    width: 50px;
+}
+.sprite__facebook{
+    background-position: 0 0;
+}
 /* ############################################################
 ########################## MODIFIER ##########################
 ############################################################ */

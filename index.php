@@ -116,19 +116,13 @@
             </div>
             <ul class="footer__redesSociais m-t-4">
                 <li class="">
-                    <a href="https://www.instagram.com/nike/?hl=pt-br">
-                        <img src="_VIEW/assets/IMG/footer/footer__instagram.png" alt="Instagram Nike">
-                    </a>
+                    <span class="sprite-footer__instagram"></span>
                 </li>
                 <li class="p-x-4">
-                    <a href="https://pt-br.facebook.com/nike/">
-                        <img src="_VIEW/assets/IMG/footer/footer__facebook.png" alt="Facebook Nike">
-                    </a>
+                    <span class="sprite-footer__facebook"></span>
                 </li>
                 <li class="">
-                    <a href="https://twitter.com/nike">
-                        <img src="_VIEW/assets/IMG/footer/footer__twitter.png" alt="Twitter Nike">
-                    </a>
+                    <span class="sprite-footer__twitter"></span>
                 </li>
             </ul>
         </div>

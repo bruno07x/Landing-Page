@@ -17,7 +17,19 @@ MODIFIER = .block__element--modifier \ .block--modifier
   grid-template-rows: auto;
   grid-gap: 20px;
   /* alinhando ao centro todo o conteudo da dobra1 */
-  justify-items: center; }
+  justify-items: center;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .entradaDobra1 {
+    /* Cria├º├úo de um grid padr├úo de 3 colunas que ser├í usado no projeto todo */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    /* alinhando ao centro todo o conteudo da dobra1 */
+    justify-items: center;
+  }
+}
 
 .especificacoesDobra2 {
   /* Cria├º├úo de um grid padr├úo de 3 colunas que ser├í usado no projeto todo */
@@ -26,7 +38,19 @@ MODIFIER = .block__element--modifier \ .block--modifier
   grid-template-rows: auto;
   grid-gap: 20px;
   /* alinhando ao centro todo o conteudo da dobra1 */
-  justify-items: normal; }
+  justify-items: normal;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .especificacoesDobra2 {
+    /* Cria├º├úo de um grid padr├úo de 3 colunas que ser├í usado no projeto todo */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    /* alinhando ao centro todo o conteudo da dobra1 */
+    justify-items: center;
+  }
+}
 
 .callDobra3 {
   /* Cria├º├úo de um grid padr├úo de 3 colunas que ser├í usado no projeto todo */
@@ -35,7 +59,19 @@ MODIFIER = .block__element--modifier \ .block--modifier
   grid-template-rows: auto;
   grid-gap: 20px;
   /* alinhando ao centro todo o conteudo da dobra1 */
-  justify-items: normal; }
+  justify-items: normal;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .callDobra3 {
+    /* Cria├º├úo de um grid padr├úo de 3 colunas que ser├í usado no projeto todo */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    /* alinhando ao centro todo o conteudo da dobra1 */
+    justify-items: center;
+  }
+}
 
 .perguntasDobra4 {
   /* Cria├º├úo de um grid padr├úo de 3 colunas que ser├í usado no projeto todo */
@@ -44,32 +80,94 @@ MODIFIER = .block__element--modifier \ .block--modifier
   grid-template-rows: auto;
   grid-gap: 20px;
   /* alinhando ao centro todo o conteudo da dobra1 */
-  justify-items: center; }
+  justify-items: center;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .perguntasDobra4 {
+    /* Cria├º├úo de um grid padr├úo de 3 colunas que ser├í usado no projeto todo */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    /* alinhando ao centro todo o conteudo da dobra1 */
+    justify-items: center;
+  }
+}
+
+.footer {
+  /* Cria├º├úo de um grid padr├úo de 3 colunas que ser├í usado no projeto todo */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  /* alinhando ao centro todo o conteudo da dobra1 */
+  justify-items: center;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .footer {
+    /* Cria├º├úo de um grid padr├úo de 3 colunas que ser├í usado no projeto todo */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    /* alinhando ao centro todo o conteudo da dobra1 */
+    justify-items: center;
+  }
+}
 
 /* ############################################################
 ########################## ELEMENT ##########################
 ############################################################ */
 .entradaDobra1__logo {
   grid-column: 2;
-  grid-row: 1; }
+  grid-row: 1;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .entradaDobra1__logo {
+    grid-column: 1;
+  }
+}
 
 .entradaDobra1__frase {
   grid-column: 2;
-  grid-row: 2; }
+  grid-row: 2;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .entradaDobra1__frase {
+    grid-column: 1;
+  }
+}
 
 .entradaDobra1__botao {
   grid-column: 2;
-  grid-row: 3; }
+  grid-row: 3;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .entradaDobra1__botao {
+    grid-column: 1;
+  }
+}
 
 .entradaDobra1__contador {
   grid-column: 1;
-  grid-row: 4; }
+  grid-row: 4;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .entradaDobra1__contador {
+    grid-column: 1;
+  }
+}
 
 .especificacoesDobra2__fraseMain {
   grid-column-start: 1;
   grid-column-end: 5;
-  grid-row: 1; }
-
+  grid-row: 1;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .especificacoesDobra2__fraseMain {
+    grid-column: 1;
+  }
+}
 .especificacoesDobra2__fraseMain::after {
   content: "";
   background: #FFBF6B;
@@ -77,31 +175,44 @@ MODIFIER = .block__element--modifier \ .block--modifier
   margin: 0 auto;
   height: 3px;
   width: 200px;
-  margin-top: 10px; }
+  margin-top: 10px;
+}
 
 .especificacoesDobra2__funcionalidades {
   grid-column: 1;
   grid-row: 2;
-  justify-items: start;
-  align-self: center; }
-
-.especificacoesDobra2__observacoes {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row: 3;
-  width: 80%; }
+  justify-self: end;
+  align-self: center;
+  max-width: 80%;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .especificacoesDobra2__funcionalidades {
+    grid-column: 1;
+  }
+}
 
 .especificacoesDobra2__exemploTenis {
   grid-column-start: 3;
   grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 4; }
+  grid-row: 2;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .especificacoesDobra2__exemploTenis {
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
 
 .especificacoesDobra2__fraseSecundaria {
   grid-column-start: 1;
   grid-column-end: 5;
-  grid-row: 4; }
-
+  grid-row: 5;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .especificacoesDobra2__fraseSecundaria {
+    grid-column: 1;
+  }
+}
 .especificacoesDobra2__fraseSecundaria::after {
   content: "";
   background: #FFBF6B;
@@ -109,74 +220,149 @@ MODIFIER = .block__element--modifier \ .block--modifier
   margin: 0 auto;
   height: 3px;
   width: 200px;
-  margin-top: 10px; }
+  margin-top: 10px;
+}
 
 .callDobra3__destaqueImagem {
   grid-row-start: 1;
   grid-row-end: 3;
   grid-column-start: 1;
-  grid-column-end: 2; }
+  grid-column-end: 2;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .callDobra3__destaqueImagem {
+    grid-column: 1;
+  }
+}
 
 .callDobra3__frase {
   grid-row-start: 1;
   grid-row-end: 2;
   grid-column-start: 2;
   grid-column-end: 3;
-  text-align: center; }
-  .callDobra3__frase::after {
-    content: "";
-    background: #FFBF6B;
-    display: block;
-    margin: 0 auto;
-    height: 3px;
-    width: 200px;
-    margin-top: 10px; }
+  text-align: center;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .callDobra3__frase {
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+.callDobra3__frase::after {
+  content: "";
+  background: #FFBF6B;
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  width: 200px;
+  margin-top: 10px;
+}
 
 .callDobra3__botao {
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 3;
-  justify-self: center; }
+  justify-self: center;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .callDobra3__botao {
+    grid-column: 1;
+  }
+}
 
 .perguntasDobra4_frase {
   grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column-end: 3;
   grid-row-start: 1;
-  grid-row-end: 2; }
-  .perguntasDobra4_frase::after {
-    content: "";
-    background: #FFBF6B;
-    display: block;
-    margin: 0 auto;
-    height: 3px;
-    width: 200px;
-    margin-top: 10px; }
+  grid-row-end: 2;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .perguntasDobra4_frase {
+    grid-column: 1;
+  }
+}
+.perguntasDobra4_frase::after {
+  content: "";
+  background: #FFBF6B;
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  width: 200px;
+  margin-top: 10px;
+}
 
 .perguntasDobra4_pergunta1 {
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 2;
   grid-row-start: 3;
-  grid-row-end: 4; }
+  grid-row-end: 4;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .perguntasDobra4_pergunta1 {
+    grid-column: 1;
+  }
+}
+.perguntasDobra4_pergunta1:nth-child(even) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+@media (min-width: 360px) and (max-width: 768px) {
   .perguntasDobra4_pergunta1:nth-child(even) {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: 1;
     grid-row-start: 4;
-    grid-row-end: 5; }
+    grid-row-end: 5;
+  }
+}
 
 .perguntasDobra4_pergunta2 {
-  grid-column-start: 3;
-  grid-column-end: 5;
+  grid-column-start: 2;
+  grid-column-end: 3;
   grid-row-start: 3;
-  grid-row-end: 4; }
+  grid-row-end: 4;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .perguntasDobra4_pergunta2 {
+    grid-column: 1;
+  }
+}
+.perguntasDobra4_pergunta2:nth-child(even) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+@media (min-width: 360px) and (max-width: 768px) {
   .perguntasDobra4_pergunta2:nth-child(even) {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 4;
-    grid-row-end: 5; }
+    grid-column: 1;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+}
+
+.footer__icon {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.footer__redesSociais {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  /* Cria├º├úo de um grid padr├úo de 3 colunas que ser├í usado no projeto todo */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  /* alinhando ao centro todo o conteudo da dobra1 */
+  justify-items: center;
+}
+.footer__redesSociais li {
+  display: inline;
+}
 
 /* ############################################################
 ########################## MODIFIER ##########################
 ############################################################ */
-
-/*# sourceMappingURL=grid.css.map */
